@@ -26,7 +26,7 @@ int main(void)
 		return (1);
 	}
 
-	// Calculates the area of the pentagon.
+	// Calculates the area of the Hexagon.
 	float area = 6 * pow(length, 2) / (4 * tan(PI / 6));
 
 	// Displays the result.
