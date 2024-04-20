@@ -53,9 +53,9 @@ int main(void)
 	cin >> federalTaxWitholdingRate;
 
 	// Displays an error message and terminates the program if the user enters a negative federal tax witholding rate.
-	if (federalTaxWitholdingRate < 0)
+	if (federalTaxWitholdingRate < 0 or federalTaxWitholdingRate > 100)
 	{
-		cout << "\nError: Federal tax witholding rate should be non-negative.\n";
+		cout << "\nError: Federal tax witholding rate should be non-negative and < 100 %.\n";
 		return (3);
 	}
 
@@ -64,9 +64,9 @@ int main(void)
 	cin >> stateTaxWitholdingRate;
 
 	// Displays an error message and terminates the program if the user enters a negative state tax witholding rate.
-	if (stateTaxWitholdingRate < 0)
+	if (stateTaxWitholdingRate < 0 or stateTaxWitholdingRate > 100)
 	{
-		cout << "\nError: State tax witholding rate should be non-negative.\n";
+		cout << "\nError: State tax witholding rate should be non-negative and < 100.\n";
 		return (4);
 	}
 
