@@ -34,7 +34,7 @@ int main(void)
 	float area = 5 * pow(side, 2) / (4 * tan(PI / 5));
 
 	// Displays the result.
-	printf("\nThe area of the polygon is: %.2f\n", area);
+	printf("\nThe area of the pentagon is: %.2f\n", area);
 
 	return (0);
 }
