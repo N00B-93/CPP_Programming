@@ -1,5 +1,6 @@
 #include <iostream>
 #include <fstream>
+#include <iomanip>
 
 /**
 	This is a program that calculates the sum, product and average of numbers in a 
