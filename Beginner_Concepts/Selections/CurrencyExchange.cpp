@@ -27,6 +27,14 @@ int main(void)
 	int option;
 	std::cin >> option;
 
+	
+	// Terminates the program if the user enters an invalid input.
+	if (not std::cin)
+	{
+		std::cout << "\nError: Invalid input, Try again.\n";
+		return (2);
+	}
+
 	// Converts currency based on user's option.
 	switch (option)
 	{
