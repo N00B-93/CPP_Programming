@@ -1,5 +1,6 @@
 #include <iostream>
 #include <string>
+#include <time.h>
 
 /**
 	This is a program that randomly generates six lowercase letters
