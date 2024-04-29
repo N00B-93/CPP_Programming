@@ -16,4 +16,6 @@ int main(void)
         float radians = i * PI / 180.0;
         std::cout << std::fixed << std::setprecision(4) << i << "\t\t" << sin(radians) / cos(radians) << "\t\t" << cos(radians) / sin(radians) << "\n";
     }
+
+    return (0);
 }
