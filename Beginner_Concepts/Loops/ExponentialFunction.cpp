@@ -15,4 +15,6 @@ int main(void)
     {
         std::cout << std::setprecision(6) << i << "\t\t" << exp(i) << "\n";
     }
+
+    return (0);
 }
