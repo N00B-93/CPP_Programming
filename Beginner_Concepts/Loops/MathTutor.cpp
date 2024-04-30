@@ -13,7 +13,8 @@
 int main(void)
 {
 	// Seeds the random number generator with the number of seconds after the Linux epoch.
-	
+
+	// String to hold invalid user input.
 	std::string clearInputStream;
 
 	// Variable to hold the user's answer.
@@ -62,7 +63,7 @@ int main(void)
 					std::cout << "\nWrong, the correct answer is " << number1 + number2 << "\n";
 				break;
 			case 2:
-				// Display an arithmetric expression.
+				// Displays an arithmetric expression.
 				std::cout << "\nWhat is " << number1 << " - " << number2 << "? ";
 				std::cin >> answer;
 
@@ -73,7 +74,7 @@ int main(void)
 					std::cout << "\nWrong, the correct answer is " << number1 - number2 << "\n";
 				break;
 			case 3:
-				// Display an arithmetric expression.
+				// Displays an arithmetric expression.
 				std::cout << "\nWhat is " << number1 << " x " << number2 << "? ";
 				std::cin >> answer;
 
@@ -81,10 +82,10 @@ int main(void)
 				if (answer == (number1 * number2))
 					std::cout << "\nCorrect!\n";
 				else
-					std::cout <<     "\nWrong, the correct answer is " << number1 * number2 << "\n";
+					std::cout << "\nWrong, the correct answer is " << number1 * number2 << "\n";
 				break;
 			case 4:
-				// Display an arithmetric expression.
+				// Displays an arithmetric expression.
 				std::cout << "\nWhat is " << number1 << " / " << number2 << "? ";
 				std::cin >> answer;
 
@@ -92,9 +93,10 @@ int main(void)
 				if (answer == (number1 / number2))
 					std::cout << "\nCorrect!\n";
 				else
-					std::cout <<         "\nWrong, the correct answer is " << number1 / number2 << "\n";
+					std::cout << "\nWrong, the correct answer is " << number1 / number2 << "\n";
 				break;
 			case 5:
+				// Exits the program.
 				return (0);
 		}
 	}
