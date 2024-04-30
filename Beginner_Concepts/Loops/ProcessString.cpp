@@ -16,14 +16,14 @@ int main(void)
     getline(std::cin, str);
 
     // Displays an error message and terminates the program if the user enters an empty string.
-    if (str == "")
+    if (str == "" or str.length() == 1)
     {
-        std::cout << "\nError: Use non-empty strings only, Try again.\n";
+        std::cout << "\nError: Use non-empty strings containing more than one character only, Try again.\n";
         return (1);
     }
 
     // Displays the characters at odd-numbered positions.
-    std::cout << "\nThe characters at odd-numbered positions are: ";
+    std::cout << "\nThe character(s) at odd-numbered positions are: ";
     for (int i = 0; i < str.size(); ++i)
     {
         if (i % 2 != 0)
