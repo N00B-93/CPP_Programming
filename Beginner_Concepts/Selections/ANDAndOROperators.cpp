@@ -24,7 +24,7 @@ int main(void)
     {
         std::cout << "\nIs " << number << " divisible by 5 or 6? " << std::boolalpha << ((number % 5 == 0) || (number % 6 == 0));
         std::cout << "\nIs " << number << " divisible and 5 and 6? " << std::boolalpha << ((number % 5 == 0) and (number % 6 == 0));
-        std::cout << "\nIs " << number << " divisible by 5 or 6, but not both? " << ((number % 5 == 0) ^ (number % 6 == 0)) ? true : false;
+        std::cout << "\nIs " << number << " divisible by 5 or 6, but not both? " << ((number % 5 == 0) != (number % 6 == 0)) << "\n";
     }
 
     return (0);
