@@ -1,4 +1,5 @@
 #include <iostream>
+#include <cstring>
 
 /**
 	This is a program that prompts the user to enter a letter and displays its corresponding number
@@ -20,9 +21,23 @@ int main(void)
 		std::cout << "\nError: Use uppercase or lowercase letters only, Try again.\n";
 		return (1);
 	}
-	else
-		std::cout << "\nThe corresponding number is: " << std::toupper(letter) - 'A' + 1 << "\n";
-
+	// Displays a number based on the letter entered by the user.
+	else if (std::string("abcABC").find(letter) != std::string::npos)
+		std::cout << "\nThe corresponding number is: 2\n" ;
+	else if (std::string("defDEF").find(letter) != std::string::npos)
+		std::cout << "\nThe corresponding number is: 3\n";
+	else if (std::string("ghiGHI").find(letter) != std::string::npos)
+		std::cout << "\nThe corresponding number is: 4\n";
+	else if (std::string("jklJKL").find(letter) != std::string::npos)
+		std::cout << "\nThe corresponding number is: 5\n";
+	else if (std::string("mnoMNO").find(letter) != std::string::npos)
+		std::cout << "\nThe corresponding number is: 6\n";
+	else if (std::string("pqrsPQRS").find(letter) != std::string::npos)
+		std::cout << "\nThe corresponding number is: 7\n";
+	else if (std::string("tuvTUV").find(letter) != std::string::npos)
+		std::cout << "\nThe corresponding number is: 8\n";
+	else if (std::string("wxyzWXYZ").find(letter != std::string::npos))
+		std::cout << "\nThe corresponding number is: 9\n";
+	
 	return (0);
 }
-
