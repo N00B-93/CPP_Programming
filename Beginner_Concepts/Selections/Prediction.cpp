@@ -23,8 +23,6 @@ int main()
 	// Generates a random two digit number.
 	randomNumber = 10 + rand() % (99 - 10);
 
-	std::cout << "\n" << randomNumber;
-
 	// Prompts the user to enter a two digit number.
 	std::cout << "\nEnter a 2-digit number: ";
 	std::cin >> input;
@@ -36,9 +34,26 @@ int main()
 		return (1);
 	}
 
-	if (randomNumber == stoi(input))
-		std::cout << "\nCorrect guess!\n100% Accuracy!\n";
-	else if ((input[0] - '0' == randomNumber / 10) or (input[1] - '0' == randomNumber % 10))
-		std::cout << "\n"
+	// Variables to hold the first and second digit of the number entered by the user.
+	int firstDigit = input[0] - '0';
+	int secondDigit = input[1] - '0';
 
+	// Checks if the user's guess is 100%, 50% or 0% accurate.
+	if (randomNumber == stoi(input))
+	{
+		std::cout << "\nNumber Generated: " << randomNumber;
+		std::cout << "\nCorrect guess!\n100% Accuracy!\n";
+	}
+	else if ((firstDigit == randomNumber / 10) or (firstDigit == randomNumber % 10) or (secondDigit == randomNumber / 10) or (secondDigit == randomNumber % 10))
+	{
+		std::cout << "\nNumber Generated: " << randomNumber;
+		std::cout << "\nOne digit matched!\n50% Accurracy!\n";
+	}
+	else
+	{
+		std::cout << "\nNumber Generated: " << randomNumber;
+		std::cout << "\nNo match!\n0% Accuracy!\n";
+	}
+
+	return (0);
 }
