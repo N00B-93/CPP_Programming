@@ -1,5 +1,4 @@
 #include <iostream>
-#include <limits>
 
 /**
     This is a program that prompts the user to enter an integer number and then
