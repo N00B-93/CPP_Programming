@@ -1,7 +1,7 @@
 #include <iostream>
 
 /**
-    This is a program that displays the multiples of 10, 15 per line
+    This is a program that displays the multiples of 10, 10 per line
     from 4000 to 4500, separated by exactly one space.
 */
 
