@@ -26,7 +26,7 @@ int main(void)
     }
 
     // Displays the result.
-    std::cout << std::setprecision(2) << std::showpoint << "\nThe average of the digits in " << number << " is: " <<averageDigits(number) << "\n";
+    std::cout << std::fixed << std::setprecision(2) << std::showpoint << "\nThe average of the digits in " << number << " is: " <<averageDigits(number) << "\n";
 
     return (0);
 }
