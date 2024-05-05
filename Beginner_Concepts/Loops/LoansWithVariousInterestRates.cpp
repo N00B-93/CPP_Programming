@@ -20,7 +20,7 @@ int main(void)
 	// Displays an error message and terminates the program if the loan amount or number of years is invalid.
 	if (std::cin.fail() or loanAmount <= 0 or numberOfYears <= 0)
 	{
-		std::cout << "\nError: Loan amonut and number of years must be >= 0, Try again.\n";
+		std::cout << "\nError: Loan amount and number of years must be >= 0, Try again.\n";
 		return (1);
 	}
 	
