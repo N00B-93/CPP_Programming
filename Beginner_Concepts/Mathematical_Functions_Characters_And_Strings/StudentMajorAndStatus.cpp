@@ -4,7 +4,8 @@
 /**
 	This is a program that prompts the user to enter two characters and displays the major and status represented in the characters. 
 	The first character indicates the major and the second is the number character 1, 2, 3, 4, which indicates whether 
-	a student is a freshman, sophomore, junior, or senior. */
+	a student is a freshman, sophomore, junior, or senior.
+*/
 
 int main(void)
 {
@@ -19,11 +20,18 @@ int main(void)
 	std::cout << "\n1. Freshman\n2. Sophomore\n3. Junior\n4. Senior";
 	std::cout << "\nEnter a major and status code(e.g. M2): ";
 	getline(std::cin, majorAndStatusCode);
+
+	    // Displays an error message and terminates the program if the status code is not in the right format.
+        if (majorAndStatusCode.length() != 2)
+        {
+            std::cout << "\nError: Major and status code must consist of 2 characters(an Uppercase alphabet and a number), Try again.\n";
+            return(1);
+        }
 	
 	major = majorAndStatusCode.at(0);
 	status = majorAndStatusCode.at(1);
 
-	// Displays a major and a status besed on user input.
+	// Displays a major and a status based on user input.
 	switch (major)
 	{
 		case 'M':
@@ -63,10 +71,9 @@ int main(void)
 				std::cout << "\nError: Invalid status code.\n";
 			break;
 		default:
-			std::cout << "\nError: Invalid Major code, Try again.\n";
+			std::cout << "\nError: Invalid Major or status code, Try again.\n";
 			break;
 	}
 
 	return (0);
 }
-
