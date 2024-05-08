@@ -24,7 +24,7 @@ void displayCoffeeMenu()
     std::cout << "\n\t\tOur Coffee Menu\n";
     std::cout << "1. Small size (9 oz) $1.75 per cup\n";
     std::cout << "2. Medium size (12 oz) $1.90 per cup\n";
-    std::cout << "3. Large size (15 oz) $2.00\n";
+    std::cout << "3. Large size (15 oz) $2.00 per cup\n";
 }
 
 /**
