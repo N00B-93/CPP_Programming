@@ -29,6 +29,11 @@ int main(void)
 		std::cout << "\nThe average of the even place digit(s) is: " << number[1] << "\n";
 		exit(EXIT_SUCCESS);
 	}
+	else if (number.length() > 9)  // Displays an error message and terminates the program if the size of the user input is greater than size of an int.
+	{
+		std::cout << "\nError: size of " << number << " is greater than size of int\nTry again with a number with less than 10 digits.\n";
+		exit(EXIT_FAILURE);
+	}
 
 	// Determines the average of the even placed digits.
 	double averageOfEvenPlacedDigits = avgOfEvenPlaces(stoi(number));
