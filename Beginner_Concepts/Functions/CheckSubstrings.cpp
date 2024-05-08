@@ -29,9 +29,12 @@ int main()
 		exit(EXIT_FAILURE);
 	}
 	
-    // Displays the index of the string in the substring.
-	if (indexOf(str, subStr) != -1)
-		std::cout << "\nThe index of '" << subStr << "' in '" << str << "' is: " << indexOf(str, subStr) << "\n";
+	// Determines the index of the substring in the main string.
+	int index = indexOf(str, subStr);
+
+    	// Displays the index of the string in the substring.
+	if (index != -1)
+		std::cout << "\nThe index of '" << subStr << "' in '" << str << "' is: " << index << "\n";
 	else
 		std::cout << "\n'" << subStr << "' is not a substring of '" << str << "'\n";
 
