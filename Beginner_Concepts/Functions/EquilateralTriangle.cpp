@@ -39,7 +39,7 @@ int main(void)
  * @param side3 The third side of the triangle.
  * @return true if the triangle is equilateral, else false is returned.
 */
-bool isValid(double side1, double side2, double side3)
+inline bool isValid(double side1, double side2, double side3)
 {
     return (side1 == side2 and side2 == side3);
 }
@@ -50,7 +50,7 @@ bool isValid(double side1, double side2, double side3)
  * @param side1 One of the sides of the equilateral triangle.
  * @return The perimeter of the equilateral triangle.
 */
-double perimeter(double side1)
+inline double perimeter(double side1)
 {
     return side1 * 3;
 }
