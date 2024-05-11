@@ -8,9 +8,9 @@
                 double inchesToMillimeters(double inches)
  */
 
-// Prototypes for the millimetersToInches function and the InchesToMillimeters function.
-double millimetersToInches(double millimeter);
-double inchesToMillimeters(double inches);
+
+double millimetersToInches(double millimeter);  // Prototypes for the millimetersToInches function.
+double inchesToMillimeters(double inches);  // Prototype of the InchesToMillimeters function.
 
 int main(void)
 {

@@ -6,8 +6,7 @@
                 int dec2Octal(const int& decimal)
 */
 
-// Prototype of the dec2Octal function.
-int dec2Octal(const int& decimal);
+int dec2Octal(const int& decimal);  // Prototype of the dec2Octal function.
 
 int main()
 {

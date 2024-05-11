@@ -1,7 +1,7 @@
 #include <iostream>
 #include <string>
 
-void search(std::string& s, char& key);
+void search(std::string& s, char& key);  // Prototype of the search function.
 
 /*
 	This is a program that prompts the user to enter a string and a character and then displays the

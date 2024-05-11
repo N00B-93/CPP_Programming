@@ -1,7 +1,7 @@
 #include <iostream>
 
 void displayEven(int number);  // Function prototype for the displayEven function.
-bool checkEven(int number);
+bool checkEven(int number);  // Function prototype of the checkEven function.
 
 /**
     This is a program that prompts the user to enter an integer and displays the even digits in it

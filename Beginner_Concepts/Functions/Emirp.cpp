@@ -7,9 +7,8 @@
     This is a program that displays the first 100 emirps 10 numbers per line.
 */
 
-// Prototypes of the isPrime and reverse functions.
-bool isPrime(int & number);
-int reverse(int number);
+bool isPrime(int & number);  // Prototype of the isPrime function.
+int reverse(int number);  // Prototype of the reverse functions.
 
 int main(void)
 {

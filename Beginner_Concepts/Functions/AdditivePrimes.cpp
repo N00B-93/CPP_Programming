@@ -6,9 +6,9 @@
     This is a program that finds the first 25 additive prime numbers and displays them in a tabular form.
 */
 
-// Prototypes of the isPrime and sumOfDigits methods
-bool isPrime(int & number);
-int sumOfDigits(int number);
+
+bool isPrime(int & number);  // Prototype of the isPrime function.
+int sumOfDigits(int number);  // Prototype of the sumOfDigits function.
 
 int main(void)
 {

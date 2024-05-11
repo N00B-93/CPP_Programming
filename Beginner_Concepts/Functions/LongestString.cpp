@@ -1,7 +1,7 @@
 #include <iostream>
 #include <string>
 
-std::string longest(const std::string& s1, const std::string& s2);
+std::string longest(const std::string& s1, const std::string& s2);  // Prototype of the longest function.
 
 /**
 	This is a program that prompts the user to enter two strings and then returns the longest of

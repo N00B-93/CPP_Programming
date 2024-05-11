@@ -6,9 +6,8 @@
     numbers, five numbers per line.
 */
 
-// Prototypes for the reverse and the isPalindrome functions.
-int reverseDigit(int number);
-bool isPalindrome(int number);
+int reverseDigit(int number);  // Prototype for the reverse function.
+bool isPalindrome(int number);  // Prototype of the isPalindrome function.
 
 int main(void)
 {

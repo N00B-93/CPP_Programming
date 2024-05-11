@@ -6,7 +6,7 @@
                     int LowestCommonMultiple(int num1, int num2)
 */
 
-int lowestCommonMultiple(int num1, int num2);
+int lowestCommonMultiple(int num1, int num2);  // Prototype of the lowestCommonMultiple function.
 
 int main(void)
 {

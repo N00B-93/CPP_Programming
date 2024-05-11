@@ -8,8 +8,8 @@
                         double perimeter(double side1)
 */
 
-bool isValid(double side1, double side2, double side3);
-double perimeter(double side1);
+bool isValid(double side1, double side2, double side3);  // Prototype of the isValid function.
+double perimeter(double side1);  // Prototype of the perimeter function.
 
 int main(void)
 {

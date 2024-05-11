@@ -1,7 +1,7 @@
 #include <iostream>
 #include <string>
 
-int count(const std::string& s, char a);
+int count(const std::string& s, char a);  // Prototype of the count function.
 
 /**
 	This is a program that prompts the user to enter a string and a character and displays the 
