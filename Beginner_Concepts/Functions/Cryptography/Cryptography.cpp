@@ -34,9 +34,9 @@ std::string decrypt4Digit(std::string number)
         int digit = number[i] - '0';
 
         if (digit >= 7)
-            decryptedNumber += static_cast<char>(digit - 7);
+            decryptedNumber += std::to_string(digit - 7);
         else
-            decryptedNumber += static_cast<char>(digit + 10 - 7);
+            decryptedNumber += std::to_string(digit + 10 - 7);
     }
 
     decryptedNumber = swap(decryptedNumber, 2, 0, 3, 1);
