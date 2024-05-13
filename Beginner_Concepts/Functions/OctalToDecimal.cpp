@@ -29,6 +29,11 @@ int main(void)
 
     // Displays the result.
     std::cout << "\n" << octalNumber << " converted to decimal is: " << octal2Dec(octalNumber);
+<<<<<<< Updated upstream
+=======
+
+    return (0);
+>>>>>>> Stashed changes
 }
 
 /**
