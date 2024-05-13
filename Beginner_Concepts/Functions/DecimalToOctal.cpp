@@ -1,4 +1,5 @@
 #include <iostream>
+#include <string>
 
 /**
     This is a program that prompts the user to enter a decimal number and then
