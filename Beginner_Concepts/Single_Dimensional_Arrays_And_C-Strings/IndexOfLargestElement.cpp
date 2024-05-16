@@ -1,7 +1,7 @@
 #include <iostream>
 
 /**
-	This is a program that prompts the user to enter 15 integers and returns the index of the largest
+	This is a program that prompts the user to enter 15 numbers and returns the index of the largest
 	element, if the largest element occurs more than once the index of it's first occurrence is returned.
 */
 
@@ -10,7 +10,7 @@ int indexOfLargestElement(double array[], int size)
 
 int main(void)
 {
-	// Variable to hold the size of the array of integers.
+	// Variable to hold the size of the array of numbers.
 	const int SIZE = 15;
 
 	// int array to hold the user input.
@@ -32,7 +32,7 @@ int main(void)
 	int index = indexOfLargestElement(numbers, SIZE);
 
 	// Displays the index of the first occurrence of the largest element.
-	std::cout << "\nThe index of the first ocxurrence of the largest element is: " << index << "\n";
+	std::cout << "\nThe index of the first occurrence of the largest element is: " << index << "\n";
 
 	return (0);
 }
