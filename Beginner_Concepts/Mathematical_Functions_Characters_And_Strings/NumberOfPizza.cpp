@@ -3,7 +3,8 @@
 #include <cmath>
 
 /**
-    
+    This is a program that prompts the user to enter the diameter of a Pizza in inches, and determines and displays the number of slices 
+    of Pizza that can be realized from the whole Pizza. Given that the area of a slice of Pizza is 14.125 inches.
 */
 
 int main(void)
