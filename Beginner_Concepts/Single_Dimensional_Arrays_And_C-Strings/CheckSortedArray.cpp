@@ -2,7 +2,7 @@
 
 /**
 	This is a program that prompt the user to enter a list of numbers, adds the to an array and
-	determines if the array is already sorted by using a function with the header;
+	determines if the array is already sorted in increasing order by using a function with the header;
 			bool isSorted(const int list[], int size)
 */
 
@@ -43,7 +43,7 @@ int main(void)
 
 
 /**
- * Checks if an array of integers is sorted or not.
+ * Checks if an array of integers is sorted in increasing order or not.
  *
  * @param array The array of integers.
  * @param size The number of elements in the array.
