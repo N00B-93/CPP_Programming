@@ -54,11 +54,11 @@ int main (int argc, char *argv[])
 }
 
 /**
- * Checks if an array of integers is sorted or not.
+ * Checks if an array of integers is sorted in ascending order or not.
  *
  * @param array The array of integers.
  * @param size The number of elements in the array.
- * @return true if the array is sorted, else false.
+ * @return true if the array is sorted in ascending order, else false.
  */
 bool isSorted(const int array[], int size)
 {
