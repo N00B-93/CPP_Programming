@@ -1,6 +1,10 @@
 #include <iostream>
 #include "Rectangle.hpp"
 
+/**
+	This program contains code that tests the functionality of the Rectangle class.
+*/
+
 void getDetails(Rectangle rectangle);  // Prototype of the getDetails function.
 
 int main(int argc, char* argv[])
