@@ -16,7 +16,7 @@ int main(void)
 	std::cout << "\nCurrent Time: " << time2.hours << ":" << time2.minutes << ":" << time2.seconds << "\n";
 
 	// Sets the time of time1 to another time.
-	time2.setElapsedTime(12665437789);
+	time2.setElapsedTime(126657789);
 
 	// Displays the new time.
 	std::cout << "\nAfter setting a new time for time2...";
