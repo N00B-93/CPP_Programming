@@ -1,6 +1,10 @@
 #include <iostream>
 #include <string>
-
+/**
+   This is a program that promptes the user to enter two strings and then determines the 
+   characters common to the string by using a function with the header;
+                    string commonCharacters(const string& s1, const string& s2)
+*/
 std::string commonCharacters(const std::string& s1, const std::string& s2);  // Prototype of the commonCharacters function.
 
 int main(void)
