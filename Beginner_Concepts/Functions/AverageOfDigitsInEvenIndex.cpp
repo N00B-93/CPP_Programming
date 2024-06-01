@@ -3,7 +3,7 @@
 
 /**
 	This is a program that prompts the user to enter an integer and then displays the average of
-	digits in even numbered indices with the aidof a function with header;
+	digits in even numbered indices with the aid of a function with header;
 			double avgOfEvenPlaces(int n)
 */
 
