@@ -1,3 +1,5 @@
+#pragma once
+
 /**
  * The type StopWatch
  */
