@@ -22,7 +22,7 @@ int main(void)
     // Displays an error message and terminates the program if the user enters an empty string.
     if (str == "" or not containsAlphabeticCharacter(str))
     {
-        std::cout << "\nError: Use a string with upper and lower case characters only, Try again.\n";
+        std::cout << "\nError: Use a string with upper or lower case characters only, Try again.\n";
         exit(EXIT_FAILURE);
     }
 
@@ -44,19 +44,19 @@ std::string swapCase(const std::string& s)
 
     for (int i = 0; i < newString.size(); ++i)
     {
-        if (islower(newString.at(i)) and isalpha(newString.at(i)))
+        if (islower(newString.at(i)))
             newString.at(i) = newString.at(i) - 32;
-        else if (isalpha(newString.at(i)))
+        else if (isupper(newString.at(i)))
             newString.at(i) = newString.at(i) + 32;
     }
     return newString;
 }
 
 /**
- * This checks if a string contains non alphabetic characters.
+ * This checks if a string contains alphabetic characters.
  * 
  * @param str The string to be processed.
- * @return true if the string contains non alphabetic characters, else returns false.
+ * @return true if the string contains alphabetic characters, else returns false.
 */
 inline bool containsAlphabeticCharacter(const std::string& str)
 {
