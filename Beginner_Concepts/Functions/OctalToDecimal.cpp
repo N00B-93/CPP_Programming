@@ -21,19 +21,17 @@ int main(void)
     std::cin >> octalNumber;
 
     // Displays an error message and terminates the program if the user input is invalid.
-    if (std::cin.fail() || std::to_string(octalNumber).find("8") != std::string::npos || octalNumber < 0)
+    if (std::cin.fail() || std::to_string(octalNumber).find("8") != std::string::npos || 
+    std::to_string(octalNumber).find("9") != std::string::npos || octalNumber < 0)
     {
-        std::cout << "\nError: Use valid positive octal numbers only, Try again.\n";
+        std::cout << "\nError: Use valid positive octal numbers that contains digits from 0 - 7 only, Try again.\n";
         exit(EXIT_FAILURE);
     }
 
     // Displays the result.
     std::cout << "\n" << octalNumber << " converted to decimal is: " << octal2Dec(octalNumber);
-<<<<<<< Updated upstream
-=======
 
     return (0);
->>>>>>> Stashed changes
 }
 
 /**
