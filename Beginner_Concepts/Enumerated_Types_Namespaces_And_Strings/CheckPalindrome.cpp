@@ -45,12 +45,9 @@ bool checkPalindrome(const std::string& str)
 {
     std::string s = str;
 
-    for (int i = 0; i < s.length(); ++i)
-        s.at(i) = tolower(s.at(i));
-
     for (int i = 0, j = s.length() - 1; i < s.length() / 2; ++i, --j)
     {
-        if (s.at(i) != s.at(j))
+        if (tolower(s.at(i)) != tolower(s.at(j)))
             return false;
     }
 
