@@ -27,7 +27,7 @@ int main(void)
             ++endPoint;
         }
         if (endPoint == 25)
-        break;
+            break;
     }
 
     return (0);
