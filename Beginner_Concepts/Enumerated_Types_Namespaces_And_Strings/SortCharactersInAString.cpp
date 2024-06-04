@@ -18,6 +18,13 @@ int main(int argc, char const *argv[])
     std::cout << "\nEnter a string: ";
     getline(std::cin, str);
 
+    // Displays an error message and terminates the program if the user enters an empty string.
+    if (str == "")
+    {
+        std::cout << "\nError: Use non empty strings only, Try again.\n";
+        exit(EXIT_FAILURE);
+    }
+
     // Displays the result.
     std::cout << "\nThe sorted string is: " << sort(str) << "\n";
 
@@ -25,7 +32,7 @@ int main(int argc, char const *argv[])
 }
 
 /**
- * Sorts a string using selection sorting algorith.
+ * Sorts a string using selection sorting algorithm.
  * 
  * @param str The string to be sorted.
  * @return The sorted string.
