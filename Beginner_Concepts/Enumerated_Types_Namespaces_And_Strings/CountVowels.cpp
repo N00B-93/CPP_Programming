@@ -18,6 +18,13 @@ int main(int argc, char const *argv[])
     std::cout << "\nEnter a string: ";
     getline(std::cin, str);
 
+    // Displays an error message and terminates the program if the user enters an empty string.
+    if (str == "")
+    {
+        std::cout << "\nError: Use non empty strings only, Try again.\n";
+        exit(EXIT_FAILURE);
+    }
+
     // Determines the number of vowels in the string.
     int numberOfVowels = countVowel(str);
 
@@ -34,7 +41,7 @@ int main(int argc, char const *argv[])
  * Determines the number of vowels in a string.
  * 
  * @param s The string to be processed.
- * @return the number of vowels in a string.
+ * @return The number of vowels in a string.
 */
 int countVowel(const std::string& s)
 {
@@ -47,6 +54,5 @@ int countVowel(const std::string& s)
             ++numberOfVowels;
     }
 
-    return
-     numberOfVowels;
+    return numberOfVowels;
 }
