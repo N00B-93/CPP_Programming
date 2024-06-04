@@ -1,12 +1,13 @@
 #include <iostream>
 
 /**
-	
+	This is a program that prompts the user to enter the three sides of a trriangle and then 
+	displays hether it is equilateral, isosceles, scalene or not a triangle.
  */
 
-enum triangleType {SCALENE, ISOSCELES, EQUILATERAL, NOT_TRIANGLE};  // User defined type representing a triangle.
+enum TriangleType {SCALENE, ISOSCELES, EQUILATERAL, NOT_TRIANGLE};  // User defined type representing a triangle.
 
-triangleType triangleShape(const float side1, const float side2, const float side3);  // Prototype of the triangleShape function.
+TriangleType triangleShape(const float side1, const float side2, const float side3);  // Prototype of the triangleShape function.
 
 int main(int argc, char** argv)
 {
@@ -25,7 +26,7 @@ int main(int argc, char** argv)
 	}
 	
 	// Determines the shape of the triangle.
-	triangleType triangle = triangleShape(side1, side2, side3);
+	TriangleType triangle = triangleShape(side1, side2, side3);
 
 	switch (triangle)
 	{
@@ -54,9 +55,9 @@ int main(int argc, char** argv)
  * @param side3 The third side.
  * @return A value of triangleType that represent whether a triangle is scalene, isosceles, equilateral or not a triangle.
  */
-triangleType triangleShape(const float side1, const float side2, const float side3)
+TriangleType triangleShape(const float side1, const float side2, const float side3)
 {
-	triangleType shape;
+	TriangleType shape;
 
 	if (side1 + side2 <= side3 || side1 + side3 <= side2 || side2 + side3 <= side1)
 		shape = NOT_TRIANGLE;
