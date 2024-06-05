@@ -14,10 +14,10 @@ double getTotalPay(HourlyPaid& hourlyPaidWorker)
 }
 
 /**
- * This determines the total pay of an SalariedWorker.
+ * This determines the total pay of a SalariedWorker.
  * 
- * @param salariedWorker A struct representing an Salaried Worker.
- * @return The total pay of an Salarieds Worker.
+ * @param salariedWorker A struct representing a Salaried Worker.
+ * @return The total pay of an Salaried Worker.
 */
 double getTotalPay(Salaried& salariedWorker)
 {

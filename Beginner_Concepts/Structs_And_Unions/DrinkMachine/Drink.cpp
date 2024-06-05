@@ -32,7 +32,7 @@ void displayDrinksMenu()
 }
 
 /**
- * This chechs if a Drink is available in the drink machine.
+ * This checks if a Drink is available in the drink machine.
  * 
  * @return true if a Drink is available, else false.
 */

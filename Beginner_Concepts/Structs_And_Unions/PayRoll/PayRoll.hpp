@@ -25,4 +25,4 @@ double getTotalPay(HourlyPaid&);  // Prototype of the overloaded getTotalPay fun
 
 double getTotalPay(Salaried&);  // Prototype of the overloaded getTotalPay function.
 
-void clearInputStream();  // Prototype of the clearInput function.
+void clearInputStream();  // Prototype of the clearInputStream function.
