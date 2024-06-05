@@ -49,6 +49,13 @@ int main(int argc, char const *argv[])
                     clearInput();
                     continue;
                 }
+		// Informs the user that a particular drink has been sold out.
+		else if (drinks[option - 1].numberInMachine == 0)
+		{
+			std::cout << "\n" << drinks[option - 1].drinkName << " is no longer in stock, Select another drink.\n";
+			continue;
+		}
+					
                 else if (option == 0)
                     break;
                 else
