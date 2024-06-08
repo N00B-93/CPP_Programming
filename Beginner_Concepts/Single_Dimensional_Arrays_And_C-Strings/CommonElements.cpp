@@ -25,14 +25,14 @@ int main(int argc, char const *argv[])
     // Reads in the elements of array1.
 
     // Reads 10 elements into array1 and displays an error message and terminates the program if the user's input is invalid.
-    if (readElements(array1, SIZE) != 10)
+    if (readElements(array1, SIZE) != 10 || std::cin.fail())
     {
         std::cout << "\nError: Use 10 integers only, Try again.\n";
         exit(EXIT_FAILURE);
     }
 
     // Reads 10 elements into array2 and displays an error message and terminates the program if the user's input is invalid.
-    if (readElements(array2, SIZE) != 10)
+    if (readElements(array2, SIZE) != 10 || std::cin.fail())
     {
         std::cout << "\nError: Use 10 integers only, Try again.\n";
         exit(EXIT_FAILURE);
