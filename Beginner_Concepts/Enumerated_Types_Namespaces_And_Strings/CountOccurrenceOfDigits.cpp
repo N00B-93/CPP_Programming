@@ -26,7 +26,7 @@ int main(int argc, char* const argv[])
 	{
 		if (std::cin.fail())
 		{
-			std::cout << "\nError: Use poitive integers > 1 only, Try again.\n";
+			std::cout << "\nError: Use positive integers > 1 only, Try again.\n";
 			std::cin.clear();
 			std::cin.ignore(std::numeric_limits<std::streamsize>::max(), '\n');
 			std::cout << "\nEnter an integer > 1: ";

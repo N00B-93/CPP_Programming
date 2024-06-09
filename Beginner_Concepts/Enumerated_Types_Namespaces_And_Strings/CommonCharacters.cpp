@@ -1,18 +1,18 @@
 #include <iostream>
 #include <string>
 /**
-   This is a program that promptes the user to enter two strings and then determines the 
-   characters common to the string by using a function with the header;
+   This is a program that prompts the user to enter two strings and then determines the 
+   characters common to the strings by using a function with the header;
                     string commonCharacters(const string& s1, const string& s2)
 */
 std::string commonCharacters(const std::string& s1, const std::string& s2);  // Prototype of the commonCharacters function.
 
 int main(void)
 {
-    // Variable to hold two strings entered by the user.
+    // Variables to hold two strings entered by the user.
     std::string s1, s2;
 
-    // Prompts the user to enter two strings.
+    // Prompts the user to enter the first string.
     std::cout << "\nEnter the first string: ";
     getline(std::cin, s1);
 
@@ -21,7 +21,7 @@ int main(void)
     getline(std::cin, s2);
 
     // Displays an error message and terminates the program if the user enters an empty string.
-    if (s1 == "" || s2 == "")
+    if (s1.empty() || s2.empty())
     {
         std::cout << "\nError: Use two non empty strings only, try again.\n";
         exit(EXIT_FAILURE);
@@ -40,7 +40,7 @@ int main(void)
 }
 
 /**
- * This detemines the characters common to two strings.
+ * This determines the characters common to two strings.
  * 
  * @param s1 The first string.
  * @param s2 The second string.

@@ -16,7 +16,7 @@ int main(int argc, char** argv)
 	int option; 
 	Choice userChoice, COMChoice;
 
-	// Seeds the random number generator with the number of seconds passed since the unix epoc.
+	// Seeds the random number generator with the number of seconds passed since the unix epoch.
 	srand(time(NULL));
 
 	// Prompts the user to play either Rock, Paper or Scissors.

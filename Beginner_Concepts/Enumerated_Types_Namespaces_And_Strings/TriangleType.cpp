@@ -1,8 +1,8 @@
 #include <iostream>
 
 /**
-	This is a program that prompts the user to enter the three sides of a trriangle and then 
-	displays hether it is equilateral, isosceles, scalene or not a triangle.
+	This is a program that prompts the user to enter the three sides of a triangle and then 
+	displays whether it is equilateral, isosceles, scalene or not a triangle.
  */
 
 enum TriangleType {SCALENE, ISOSCELES, EQUILATERAL, NOT_TRIANGLE};  // User defined type representing a triangle.

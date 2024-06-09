@@ -3,8 +3,8 @@
 
 /**
 	This is a program that prompts the user to enter a string and then encrypts the string by using the
-	ROT13 letter substitution cypher and a function with the header;
-			void encryptROT13(string str)
+	ROT13 letter substitution cipher and a function with the header;
+			void encryptROT13(string& str)
 */
 
 void encryptROT13(std::string& str);  // Prototype of the encryptROT13 function.
@@ -28,14 +28,14 @@ int main(int argc, char* const argv[])
 	// Encrypts the string.
 	encryptROT13(str);
 	
-	// Disoplays the encrypted string.
+	// Displays the encrypted string.
 	std::cout << "\nThe encrypted string is: " << str << "\n";
 	
 	return (0);
 }
 
 /**
- * Encrypts a string using the ROT13 letter substitution cypher.
+ * Encrypts a string using the ROT13 letter substitution cipher.
  *
  * @param str The string to be encrypted.
  */
@@ -45,23 +45,22 @@ void encryptROT13(std::string& str)
 
 	for (int i = 0; i < str.length(); ++i)
 	{
-
 		char currentChar = str[i];
 
    		// Check if character is alphabetic
-    		if (isalpha(currentChar))
+    	if (isalpha(currentChar))
 		{
 			bool isUpper = isupper(currentChar);  // Check if uppercase
 
-      			// Convert to lowercase for processing
-      			currentChar = tolower(currentChar);
+      		// Convert to lowercase for processing
+      		currentChar = tolower(currentChar);
 
 			int newPosition = (currentChar - 'a' + SHIFT_VALUE) % 26;
 			char newChar = newPosition + 'a';
 
 			// Convert back to uppercase if original was uppercase
 			str[i] = isUpper ? toupper(newChar) : newChar;
-    		}
+    	}
   	}
 }
 

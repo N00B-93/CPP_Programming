@@ -2,10 +2,10 @@
 #include <string>
 
 /**
-    This is a program that prompts the user to enter a string and then  uses a 
+    This is a program that prompts the user to enter a string and then uses a 
     function with the header;
                         bool checkPalindrome(const std::string& str)
-    to checks if the string is a palindrome or not 
+    to checks if the string is a palindrome or not.
 */
 
 bool checkPalindrome(const std::string& str);  // Prototype of the checkPalindrome function.
@@ -19,8 +19,8 @@ int main(int argc, char const *argv[])
     std::cout << "\nEnter a string: ";
     getline(std::cin, str);
 
-    // displays and error message and terminates the program if the user enters an empty string.
-    if (str == "")
+    // Displays and error message and terminates the program if the user enters an empty string.
+    if (str.empty())
     {
         std::cout << "\nError: Use non empty strings only, Try again/\n";
         exit(EXIT_FAILURE);
