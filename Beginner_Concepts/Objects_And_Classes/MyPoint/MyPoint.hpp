@@ -12,5 +12,5 @@ class MyPoint
 
         MyPoint(double, double);  // Parameterized constructor's prototype.
 
-        static double getDistance(MyPoint, MyPoint);  // Prototype of the getDistance method.
+        double getDistance(MyPoint);  // Prototype of the getDistance method.
 };
