@@ -16,7 +16,7 @@ int main(int argc, char const *argv[])
     // Displays the distance between the two points.
     std::cout << std::fixed << std::setprecision(2) << "\nThe distance between (" << point1.xCoord << ", " 
     << point1.yCoord << ")" << " and (" << point2.xCoord << ", " 
-    << point2.yCoord << ")" << " is: " << MyPoint::getDistance(point1, point2);
+    << point2.yCoord << ")" << " is: " << point1.getDistance(point2);
 
     return 0;
 }
