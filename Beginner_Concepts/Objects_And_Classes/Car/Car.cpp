@@ -5,7 +5,7 @@
  * Instantiates a new Car.
  * 
  * @param carYearModel The Car's year model.
- * @param carmake The Car's make.
+ * @param carMake The Car's make.
  * @param carSpeed The Car's speed.
 */
 Car::Car(int CarYearModel, std::string carMake, int carSpeed)

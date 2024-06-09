@@ -7,7 +7,7 @@
 
 int main(int argc, char const *argv[])
 {
-    // Creates an EvenNummber Object with value 16.
+    // Creates an EvenNumber Object with value 16.
     EvenNumber evenNumber(16);
 
     // Displays the next even number.

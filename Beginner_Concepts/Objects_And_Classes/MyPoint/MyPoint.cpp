@@ -2,7 +2,7 @@
 #include "MyPoint.hpp"
 
 /**
- * Intsantiates a new MyPoint Object with default values.
+ * Instantiates a new MyPoint Object with default values.
 */
 MyPoint::MyPoint()
 {
@@ -29,7 +29,7 @@ MyPoint::MyPoint(double x, double y)
  * @param myPoint2 the second MyPoint Object.
  * @return The distance between myPoint1 and myPoint2.
 */
-double MyPoint::getDistance(MyPoint mypoint1, MyPoint myPoint2)
+double MyPoint::getDistance(MyPoint myPoint1, MyPoint myPoint2)
 {
-    return sqrt(pow(mypoint1.xCoord - myPoint2.xCoord, 2) + pow(mypoint1.yCoord - myPoint2.yCoord, 2));
+    return sqrt(pow(myPoint1.xCoord - myPoint2.xCoord, 2) + pow(myPoint1.yCoord - myPoint2.yCoord, 2));
 }
