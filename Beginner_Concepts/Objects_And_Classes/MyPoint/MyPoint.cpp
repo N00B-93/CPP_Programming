@@ -25,11 +25,10 @@ MyPoint::MyPoint(double x, double y)
 /**
  * This determines the distance between two MyPoint Objects.
  * 
- * @param myPoint1 The first MyPoint Object.
- * @param myPoint2 the second MyPoint Object.
- * @return The distance between myPoint1 and myPoint2.
+ * @param myPoint2 The second MyPoint Object.
+ * @return The distance between the current MyPoint instance and the second point.
 */
-double MyPoint::getDistance(MyPoint myPoint1, MyPoint myPoint2)
+double MyPoint::getDistance(MyPoint myPoint2)
 {
-    return sqrt(pow(myPoint1.xCoord - myPoint2.xCoord, 2) + pow(myPoint1.yCoord - myPoint2.yCoord, 2));
+    return sqrt(pow(xCoord - myPoint2.xCoord, 2) + pow(yCoord - myPoint2.yCoord, 2));
 }
