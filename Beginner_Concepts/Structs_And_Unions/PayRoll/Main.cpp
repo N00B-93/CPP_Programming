@@ -20,7 +20,7 @@ int main(int argc, char const *argv[])
 
     while (true)
     {
-        // Displays the main mmenu.
+        // Displays the main menu.
         std::cout << "\n\t\tEmployee Earnings Calculator\n";
         std::cout << "\n1. Salaried Worker\n2. Hourly Paid Worker\n3. Exit\n";
         std::cout << "\nSelect an option: ";

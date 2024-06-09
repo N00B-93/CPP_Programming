@@ -3,7 +3,7 @@
 /**
  * Instantiates a new MyInteger Object.
  * 
- * @param integervalue The value of the MyInteger Object.
+ * @param integerValue The value of the MyInteger Object.
 */
 MyInteger::MyInteger(int integerValue)
 {
@@ -135,7 +135,7 @@ bool MyInteger::isPrime(const MyInteger& number)
 /**
  * Checks if the value in the Object is equal to the specified value.
  * 
- * @param number The value to be comparaed with the value in the MyInteger Object.
+ * @param number The value to be compared with the value in the MyInteger Object.
  * @return true if both values are equal, else false.
 */
 bool MyInteger::equals(int number) const
@@ -146,7 +146,7 @@ bool MyInteger::equals(int number) const
 /**
  * Checks if the value in the Object is equal to the value pointed to by a MyInteger reference.
  * 
- * @param number The value to be comparaed with the value in the MyInteger Object.
+ * @param number The value to be compared with the value in the MyInteger Object.
  * @return true if both values are equal, else false.
 */
 bool MyInteger::equals(const MyInteger& number) const

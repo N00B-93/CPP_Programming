@@ -63,7 +63,8 @@ int main(int argc, char* const argv[])
  *
  * @param array The array to be processed.
  * @param size The number of elements in the array.
- * @return A pointer to an array holding the number of even and odd elements in the array(The first member represents count of even numbers and second memeber represents count of odd members.
+ * @return A pointer to an array holding the number of even and odd elements in the array(The first member represents count 
+ * of even numbers and second member represents count of odd members.
  */
 int* analyzeAndDisplayArray(int array[], const int size)
 {

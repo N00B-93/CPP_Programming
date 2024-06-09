@@ -42,7 +42,7 @@ int main(int argc, char* const argv[])
 		}
 	}
 
-	// Determines the maximun element in the array and its position.
+	// Determines the maximum element in the array and its position.
 	int* ptr = std::max_element(array, array + numberOfElements);
 
 	// Displays the result.

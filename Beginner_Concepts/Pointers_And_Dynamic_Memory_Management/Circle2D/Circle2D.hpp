@@ -1,7 +1,7 @@
 #pragma once
 
 /**
- *  The type Cirle2D.
+ *  The type Circle2D.
 */
 class Circle2D
 {

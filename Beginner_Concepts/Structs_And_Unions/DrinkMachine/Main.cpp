@@ -50,15 +50,15 @@ int main(int argc, char const *argv[])
                     clearInput();
                     continue;
                 }
-		// Breaks out of the loop.
-		else if (option == 0)
-			break;
-		// Informs the user that a particular drink has been sold out.
-		else if (drinks[option - 1].numberInMachine == 0)
-		{
-			std::cout << "\n" << drinks[option - 1].drinkName << " is no longer in stock, Select another drink.\n";
-			continue;
-		}
+		        // Breaks out of the loop.
+		        else if (option == 0)
+			        break;
+		        // Informs the user that a particular drink has been sold out.
+		        else if (drinks[option - 1].numberInMachine == 0)
+		        {
+			        std::cout << "\n" << drinks[option - 1].drinkName << " is no longer in stock, Select another drink.\n";
+			        continue;
+		        }
                 else
                 {
                     // Prompts the user to enter the quantity of drinks to be purchased.
@@ -81,7 +81,7 @@ int main(int argc, char const *argv[])
                     // Determines the total cost of drink(s) purchased.
                     double totalPrice = quantityOfDrinkToPurchase * drinks[option - 1].drinkCost;
 
-		    totalPrice = ceil(totalPrice);
+		            totalPrice = ceil(totalPrice);
 
                     // Displays an error message and clears the stdin if the user input is invalid.
                     if (std::cin.fail() || money <= 0 || money > MAX_BILL_AMOUNT)
@@ -105,7 +105,7 @@ int main(int argc, char const *argv[])
                     else
                     {
                         // Determines the change due to the user.
-			double change = money - totalPrice;
+			            double change = money - totalPrice;
 
                         // Displays the quantity of drinks purchased.
                         if (quantityOfDrinkToPurchase == 1)
