@@ -53,7 +53,7 @@ int Instructor::getOfficeNumber() const
 */
 void Instructor::setFirstName(std::string& firstName)
 {
-    this->firstName = lastName;98;
+    this->firstName = lastName;
 }
 
 /**
