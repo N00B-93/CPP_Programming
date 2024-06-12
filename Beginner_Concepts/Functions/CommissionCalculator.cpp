@@ -3,7 +3,7 @@
 
 /**
 	This is a program that prompts the user to enter his or her daily sales and then determines the
-	corresponding commission by using a functionwith the header;
+	corresponding commission by using a function with the header;
 			double getCommission(double& dailySales)
 */
 
