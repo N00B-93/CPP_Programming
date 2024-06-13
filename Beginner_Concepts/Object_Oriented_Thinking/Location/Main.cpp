@@ -31,8 +31,8 @@ int main(int argc, char const *argv[])
     for (int i = 0; i < rows; ++i)
     {
         std::cout << "\nEnter the " << COLUMN_SIZE << " elements of row " << i + 1 << ": ";
-        int j = 0;
-        for (; j < COLUMN_SIZE; ++j)
+
+        for (int j = 0; j < COLUMN_SIZE; ++j)
         {
             std::cin >> array[i][j];
         }
@@ -44,7 +44,6 @@ int main(int argc, char const *argv[])
             std::cin.clear();
             std::cin.ignore(std::numeric_limits<std::streamsize>::max(), '\n');
             --i;
-            --j;
             continue;
         }
     }
