@@ -3,7 +3,7 @@
 
 /**
     This is a program that prompts the user to enter the elements of a 4x4 matrix
-    and then displays the sum of elements in the major disgonal.
+    and then displays the sum of elements in the major diagonal.
 */
 
 // Constant representing the number of columns in the array.
@@ -45,7 +45,7 @@ int main(int argc, char* const argv[])
 /**
  * Determines the sum of elements in the major diagonal of a square matrix.
  * 
- * @param array The array whose sum of elements in it's major disgonal is to be determined.
+ * @param array The array whose sum of elements in it's major diagonal is to be determined.
  * @return The sum of elements in the major diagonal of a square array.
 */
 double sumMajorDiagonal(const double array[][COLUMNS])
