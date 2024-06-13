@@ -23,7 +23,7 @@ const int COLUMNS = 5;  // Constant representing the number of columns.
  * Sums the row of a 2_Dimensional array of marks and appends each sum to another array holding the total scores.
  * 
  * @param marks A 2-D array of integers representing marks.
- * @param totalmarks A 1-D array to hold the total sum of each row.
+ * @param totalMarks A 1-D array to hold the total sum of each row.
  * @param size The number of rows in the 2-D array.
 */
 void sumOfRows(const int marks[][COLUMNS], int totalMarks[], int size)
@@ -82,7 +82,7 @@ void sortScores(int totalScore[], int studentNumber[], int size)
 /**
  * Displays the arrays containing the students total marks and their respective numbers..
  *
- * @param totalmarks The array containing the students total marks.
+ * @param totalMarks The array containing the students total marks.
  * @param studentNumber The array containing the students numbers.
  * @param size The number of elements in an array.
  */
@@ -99,7 +99,7 @@ int main(int argc, char* const argv[])
     // Constant representing the number of rows.
     const int ROWS = 8;
 
-    // 2-D Array representing stuidents marks.
+    // 2-D Array representing students marks.
     int marks[][COLUMNS] =
     {
         {12, 14, 13, 14, 15},
