@@ -16,7 +16,7 @@ int main(void)
 	std::cin >> exchangeRate;
 
 	// Terminates the program if the user enters an invalid input.
-	if (not std::cin or exchangeRate < 0)
+	if (std::cin.fail() or exchangeRate < 1)
 	{
 		std::cout << "\nError: Exchange rate must be > 0, Try again.\n";
 		return (1);
@@ -29,7 +29,7 @@ int main(void)
 
 	
 	// Terminates the program if the user enters an invalid input.
-	if (not std::cin)
+	if (std::cin.fail())
 	{
 		std::cout << "\nError: Invalid input, Try again.\n";
 		return (2);
@@ -43,7 +43,7 @@ int main(void)
 			std::cin >> amount;
 
 			// Terminates the program if the user enters an invalid input.
-			if (not std::cin or amount < 0)
+			if (std::cin.fail() or amount < 0)
 			{
 				std::cout << "\nError: Invalid Amount, Try again.\n";
 				break;
@@ -57,7 +57,7 @@ int main(void)
 			std::cin >> amount;
 
 			// Terminates the program if the user enters an invalid input.
-			if (not std::cin and amount < 0)
+			if (std::cin.fail() and amount < 0)
 			{
 				std::cout << "\nError: Amount must be > 0, Try again.\n";
 				break;
