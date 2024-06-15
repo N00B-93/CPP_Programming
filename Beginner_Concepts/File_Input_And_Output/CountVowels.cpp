@@ -4,7 +4,7 @@
 
 /**
 	This is a program that prompts the user to enter the name or path to a file and then counts and
-	dispplays the number of vowels in the file.
+	displays the number of vowels in the file.
 */
 
 int main(int argc, char* const argv[])
