@@ -17,9 +17,23 @@ int main(void)
 	cout << "\nEnter the current day(Sunday is 0, Monday is 1...): ";
 	cin >> currentDay;
 
+	// Displays an error message and terminates the program if the current day entered by the user is invalid.
+	if (std::cin.fail() || currentDay < 0 || currentDay > 6)
+	{
+		std::cout << "\nError: Use a number from 0 - 6 to represent current day.\n";
+		exit(EXIT_FAILURE);
+	}
+
 	// Prompts the user to enter the number of days elapsed.
 	cout << "\nEnter the number of days elapsed since today: ";
 	cin >> numberOfDaysElapsed;
+
+	// Displays an error message and terminates the program if the number of days elapsed entered by the user is invalid.
+	if (std::cin.fail() || numberOfDaysElapsed < 0)
+	{
+		std::cout << "\nError: Number of days should be positive.\n";
+		exit(EXIT_FAILURE);
+	}
 
 	// Displays the current day.
 	switch (currentDay)
