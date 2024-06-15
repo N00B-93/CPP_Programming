@@ -17,12 +17,19 @@ int main(void)
 	cout << "\nEnter the three sides of the triangle: ";
 	cin >> side1 >> side2 >> side3;
 
-	// Determines whether the triangle is right-angled or not.
-	if (side1 * side1 == side2 * side2 + side3 * side3)
-		cout << "\nThe triangle is a right angle triangle" << endl;
-	else if (side2 * side2 == side1 * side1 + side3 * side3)
-		cout << "\nThe triangle is a right angle triangle" << endl;
-	else if (side3 * side3 == side1 * side1 + side2 * side2)
+	// Displays an error message and terminates the program if any of the triangle's side is invalid.
+	if (std::cin.fail() || side1 <= 0 || side2 <= 0 || side3 <= 0)
+	{
+		std::cout << "\nError: The sides of the triangle must be > 0, Try again.\n";
+		exit(EXIT_FAILURE);
+	}
+
+	// Checks if the triangle is a right angled triangle.
+	bool isRightAngled = (side1 * side1 == side2 * side2 + side3 * side3) || (side2 * side2 == side1 * side1 + side3 * side3) || 
+	(side3 * side3 == side1 * side1 + side2 * side2);
+
+	// Displays whether the triangle is right-angled or not.
+	if (isRightAngled)
 		cout << "\nThe triangle is a right angle triangle" << endl;
 	else
 		cout << "\nThe triangle is not a right angle triangle." << endl;
