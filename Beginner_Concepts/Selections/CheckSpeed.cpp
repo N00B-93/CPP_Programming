@@ -2,8 +2,7 @@
 #include <iomanip>
 
 /**
-	This is a program that prompts the user to enter the speed of a 
-vehicle. If speed is less than 20, display 'too slow'; if speed is greater 
+	This is a program that prompts the user to enter the speed of a vehicle. If speed is less than 20, display 'too slow'; if speed is greater 
 	than 80, display 'too fast'; otherwise, display 'just right'.
 */
 
@@ -19,9 +18,9 @@ int main(void)
 	cin >> speed;
 
 	// Displays an error message and terminates the program if the user enters a negative speed.
-	if (speed < 0)
+	if (speed < 1 || std::cin.fail())
 	{
-		cout << "\nError: Speed must be non-negative, Try again." << endl;
+		cout << "\nError: Speed must be non-negative and greater than 0, Try again." << endl;
 		return (1);
 	}
 	else if (speed < 20)
