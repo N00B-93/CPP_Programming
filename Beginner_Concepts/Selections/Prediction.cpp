@@ -1,7 +1,7 @@
 #include <iostream>
 #include <cstdlib>
 #include <ctime>
-#include <cstring>
+#include <string>
 
 /**
 	This is a program that generates a random two-digit integer. The program prompts the user to predict the generated number by entering a 2-digit 
@@ -28,7 +28,7 @@ int main()
 	std::cin >> input;
 
 	// Displays an error message and terminates the program if the user's input is invalid.
-	if (input.length() != 2 or (not isdigit(input[0])) or (not isdigit(input[1])))
+	if (input.length() != 2 || (!isdigit(input[0])) || (!isdigit(input[1])))
 	{
 		std::cout << "\nError: Use a 2-digit number only, Try again.\n";
 		return (1);
@@ -38,22 +38,16 @@ int main()
 	int firstDigit = input[0] - '0';
 	int secondDigit = input[1] - '0';
 
+	// Displays the random number generated.
+	std::cout << "\nNumber Generated: " << randomNumber;
+
 	// Checks if the user's guess is 100%, 50% or 0% accurate.
-	if (randomNumber == stoi(input))
-	{
-		std::cout << "\nNumber Generated: " << randomNumber;
+	if (randomNumber == std::stoi(input))
 		std::cout << "\nCorrect guess!\n100% Accuracy!\n";
-	}
-	else if ((firstDigit == randomNumber / 10) or (firstDigit == randomNumber % 10) or (secondDigit == randomNumber / 10) or (secondDigit == randomNumber % 10))
-	{
-		std::cout << "\nNumber Generated: " << randomNumber;
-		std::cout << "\nOne digit matched!\n50% Accurracy!\n";
-	}
+	else if ((firstDigit == randomNumber / 10) || (firstDigit == randomNumber % 10) || (secondDigit == randomNumber / 10) || (secondDigit == randomNumber % 10))
+		std::cout << "\nOne digit matched!\n50% Accuracy!\n";
 	else
-	{
-		std::cout << "\nNumber Generated: " << randomNumber;
 		std::cout << "\nNo match!\n0% Accuracy!\n";
-	}
 
 	return (0);
 }
