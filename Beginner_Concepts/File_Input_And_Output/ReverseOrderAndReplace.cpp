@@ -44,8 +44,10 @@ int main(int argc, char* const arg[])
 	double* ptr = numbers;
 	std::sort(ptr, ptr + 20);
 	std::cout << "\nNumbers sorted!";
+
 	// Opens the file.
 	inputFile.open(filePath.c_str(), std::ios::out);
+	
 	// Writes the sorted data to the file.
 	std::cout << "\nWriting sorted numbers back to the file...";
 	for (int i = 0, j = 1; i < SIZE; ++i, ++j)
