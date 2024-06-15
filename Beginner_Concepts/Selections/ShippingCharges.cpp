@@ -8,7 +8,7 @@
                     Over 6 kg but not more than 10 kg           $3.70 
                     Over 10 kg but not more than 20 kg          $4.80
     This is a program that asks for the weight of the package and the distance it is to be shipped, and then displays the charges.
-    NB: Package weight nmust be > 0 and <= 20 kg and distance to be shipped must be >= 10 and <= 3000 miles
+    NB: Package weight must be > 0 and <= 20 kg and distance to be shipped must be >= 10 and <= 3000 miles
 */
 
 int main(int argc, char const *argv[])
