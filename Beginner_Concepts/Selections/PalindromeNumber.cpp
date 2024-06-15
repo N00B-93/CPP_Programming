@@ -17,7 +17,7 @@ int main(void)
 	cin >> number;
 
 	// Exits the program if the user enters a negative number.
-	if (number < 0 or number < 100 or number > 999)
+	if (number < 100 or number > 999)
 	{
 		cout << "\nError: Use non-negative 3-digit numbers only, Try again." << endl;
 		return (1);
