@@ -9,7 +9,7 @@ using namespace std;
 
 int main(void)
 {
-	// Initailizes a variable to hold the number entered by the user.
+	// Initializes a variable to hold the number entered by the user.
 	double number = 0.0;
 
 	// Prompts the user to enter a number.
