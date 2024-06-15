@@ -9,10 +9,10 @@
 
 int main(void)
 {
-    // Declares variables to hold the x and y coodinates of the point.
+    // Declares variables to hold the x and y coordinates of the point.
     float xCoord, yCoord;
 
-    // Prompts the user to enter the x and y coodinates of the point.
+    // Prompts the user to enter the x and y coordinates of the point.
     std::cout << "\nEnter the x and y coordinate (x, y) of the point: ";
     std::cin >> xCoord >> yCoord;
     
