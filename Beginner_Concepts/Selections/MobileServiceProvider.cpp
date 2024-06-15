@@ -26,7 +26,7 @@ int main (int argc, char *argv[])
     // Converts the user input to uppercase.
     subscriptionPackage = toupper(subscriptionPackage);
     
-    // Displays an error mesage and terminates the program if the subscription package is invalid.
+    // Displays an error message and terminates the program if the subscription package is invalid.
     if (subscriptionPackage != 'A' && subscriptionPackage != 'B' && subscriptionPackage != 'C')
     {
         std::cout << "\nError: Wrong subscription package selected\nSubscription package should be; 'A', or 'B' or 'C'\nTry again.\n";
