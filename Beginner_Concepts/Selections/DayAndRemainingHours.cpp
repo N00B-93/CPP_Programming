@@ -37,25 +37,25 @@ int main(void)
 	// Displays the current day.
 	switch (currentDay)
 	{
-		case 0:
+		case 1:
 			cout << "\nToday is Sunday ";
 			break;
-		case 1:
+		case 2:
 			cout << "\nToday is Monday ";
 			break;
-		case 2:
+		case 3:
 			cout << "\nToday is Tuesday ";
 			break;
-		case 3:
+		case 4:
 			cout << "\nToday is Wednesday ";
 			break;
-		case 4:
+		case 5:
 			cout << "\nToday is Thursday ";
 			break;
-		case 5:
+		case 6:
 			cout << "\nToday is Friday ";
 			break;
-		case 6:
+		case 7:
 			cout << "\nToday is Saturday ";
 			break;
 	}
