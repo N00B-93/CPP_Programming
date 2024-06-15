@@ -1,4 +1,5 @@
 #include <iostream>
+#include <cmath>
 #include <iomanip>
 
 using namespace std;
@@ -13,13 +14,17 @@ int main(void)
 {
 	// Declares variable used to store the coefficients of the equation.
 	float a, b, c;
-	
-	// Sets precision of each floating point number to 4.
-	cout << setprecision(4);
 
 	// Prompts the user to enter the coefficients of the equation.
 	cout << "\nEnter the coefficients a, b, c separated by space: ";
 	cin >> a >> b >> c;
+
+	// Displays an error message and terminates the program if the user input(s) is invalid.
+	if (std::cin.fail())
+	{
+		std::cout << "\nError: Use real numeric values only, Try again.\n";
+		exit(EXIT_FAILURE);
+	}
 
 	// Calculates the discriminant of the equation.
 	float discriminant = b * b - (4 * a * c);
@@ -36,17 +41,14 @@ int main(void)
 	float root2 = (-b - pow(discriminant, 0.5)) / (2 * a);
 	
 	if (root1 == root2)
-	{
-		cout << "\nThe root is: "
+		cout << setprecision(4) << "\nThe root is: "
 		     << root1 << endl;
-	}
+
 	else
-	{
-		cout << "\nThe roots are: "
+		cout << setprecision(4) << "\nThe roots are: "
 		     << root1
 		     << " and "
 		     << root2 << endl;
-	}
 
 	return (0);
 }
