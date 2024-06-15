@@ -4,7 +4,7 @@
 
 /**
 	This is a program that prompts the user to enter the coordinates of the edges of an equilateral triangle and then
-	calculates and displays the arew of the ewuilateral triangle.
+	calculates and displays the area of the equilateral triangle.
 */
 
 int main(void)
