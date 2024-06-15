@@ -15,9 +15,23 @@ int main(void)
     std::cout << "\nEnter the x and y coordinate of the first point: ";
     std::cin >> x1 >> y1;
 
+    // Displays an error message and terminates the program if the user's input is invalid.
+    if (std::cin.fail())
+    {
+        std::cout << "\nError: Use real numbers only, Try again.\n";
+        exit(EXIT_FAILURE);
+    }
+    
     // Prompts the user to enter the coordinates of the second point.
     std::cout << "\nEnter the x and y coordinate of the second point: ";
     std::cin >> x2 >> y2;
+
+    // Displays an error message and terminates the program if the user's input is invalid.
+    if (std::cin.fail())
+    {
+        std::cout << "\nError: Use real numbers only, Try again.\n";
+        exit(EXIT_FAILURE);
+    }
 
     // Calculates the slope of the line.
     float m = y2 - y1 / (x2 - x1);
@@ -27,7 +41,7 @@ int main(void)
 
     // Displays the equation of the line.
     std::setprecision(4);
-    if (m == 1 and b == 0)
+    if (m == 1 && b == 0)
         std::cout << "\nThe line connecting (" << x1 << "," << " " << y1 << ") and (" << x2 << "," << " " << y2 << ")  is: " << " y = x\n";
     else if (m == 1)
         std::cout << "\nThe line connecting (" << x1 << "," << " " << y1 << ") and (" << x2 << "," << " " << y2 << ") is: " << "y = x + " << b << "\n";
