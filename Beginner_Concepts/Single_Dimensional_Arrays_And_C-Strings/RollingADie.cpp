@@ -30,7 +30,7 @@ int main(void)
  * Rolls a die a by randomly generating a number between 1 and 6 a specified amount of times and 
  * records the frequency of occurrence of each face of the die.
  *
- * @param frquency An array to hold the frequency of occurrence of each face.
+ * @param frequency An array to hold the frequency of occurrence of each face.
  * @param numberOfRolls The number of times the die is to be rolled.
  */
 void rollDie(int frequency[], const int numberOfRolls)

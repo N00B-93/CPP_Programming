@@ -1,4 +1,5 @@
 #include <iostream>
+#include <string>
 
 /**
  	This is a program that prompts the user to enter a string, replace all occurrence of space with
@@ -21,14 +22,14 @@ int main(int argc, char* const argv[])
 		exit(EXIT_FAILURE);
 	}
 
-	// Replace all occurence of space with underscore.
+	// Replace all occurrence of space with underscore.
 	for (int i = 0; i < sentence.length(); ++i)
 	{
 		if (isspace(sentence.at(i)))
 			sentence.at(i) = '_';
 	}
 
-	// Displays the string with spece replaced with '_'.
+	// Displays the string with space replaced with '_'.
 	std::cout << "\nThe modified string is: " << sentence << "\n";
 
 	return (0);

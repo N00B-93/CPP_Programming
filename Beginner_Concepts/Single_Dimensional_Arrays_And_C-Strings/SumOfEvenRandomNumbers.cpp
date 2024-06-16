@@ -4,7 +4,7 @@
 #include <iomanip>
 
 /**
-	This is a program that genetates 25 numbers between 0 and 25 randomly and then determines the 
+	This is a program that generates 25 numbers between 0 and 25 randomly and then determines the 
 	sum of even integers by using a method with the header;
 			int sum(const int array[], int size)
 	and then displays the result.
