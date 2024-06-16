@@ -1,13 +1,14 @@
 #include <iostream>
 #include <array>
 #include <string>
+#include <limits>
 #include <iomanip>
 
 // Constant to hold the size of the arrays used.
 const size_t SIZE = 5;
 
-int getLargestElement(std::array<int, SIZE> list); // Prototype of the getIndexOfLargestElement function.
-void displayWinners(std::array<int, SIZE> list, int largestElement, std::array<std::string, SIZE> names); // Prototype of the allIndicesOfLargestElement function.
+int getLargestElement(std::array<int, SIZE>& list); // Prototype of the getIndexOfLargestElement function.
+void displayWinners(std::array<int, SIZE>& list, int largestElement, std::array<std::string, SIZE>& names); // Prototype of the allIndicesOfLargestElement function.
 
 int main(int argc, char const *argv[])
 {
@@ -17,11 +18,8 @@ int main(int argc, char const *argv[])
     // Array holding the votes received by each candidate.
     std::array<int, SIZE> votesReceived;
 
-    // Variable to hold the total vvotes received by all candidates.
+    // Variable to hold the total votes received by all candidates.
     int totalVotes(0);
-
-    // Variable to hold invalid user input.
-    std::string garbageCollector;
 
     // Prompts the user to enter the candidates names and the votes each candidate received.
     for (size_t i = 0; i < SIZE; ++i)
@@ -39,15 +37,13 @@ int main(int argc, char const *argv[])
         {
             std::cout << "\nError: Votes received must be non negative, Try again.\n";
             std::cin.clear();
-            getline(std::cin, garbageCollector);
+            std::cin.ignore(std::numeric_limits<std::streamsize>::max(), '\n');
             --i;
             continue;
         }
 
         // Adds the current candidate's votes to the total votes.
         totalVotes += votesReceived[i];
-
-        getline(std::cin, garbageCollector);
     }
 
     // Displays the name's votes received and the percentage of total votes for each candidates.
@@ -72,7 +68,7 @@ int main(int argc, char const *argv[])
  * @param list An array containing integers.
  * @return The largest element in an array.
 */
-int getLargestElement(std::array<int, SIZE> list)
+int getLargestElement(std::array<int, SIZE>& list)
 {
     int largest = list[0];
 
@@ -95,10 +91,11 @@ int getLargestElement(std::array<int, SIZE> list)
  * @param names An array containing candidate's names.
 */
 
-void displayWinners(std::array<int, SIZE> votes, int largestVote, std::array<std::string, SIZE> names)
+void displayWinners(std::array<int, SIZE>& votes, int largestVote, std::array<std::string, SIZE>& names)
 {
     std::cout << "\nThe Winner(s) of the election is:\n";
     int countWinners = 0;
+
     for (size_t i = 0; i < votes.size(); ++i)
     {
         if (votes[i] == largestVote)
