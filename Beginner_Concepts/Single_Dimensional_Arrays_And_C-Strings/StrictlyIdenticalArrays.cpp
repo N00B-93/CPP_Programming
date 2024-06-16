@@ -2,7 +2,7 @@
 
 /**
 	Two arrays list1 and list2 are strictly identical if they have the same length and list1[i] equal list2[i] for all i. 
-	This is a program that prompts the user to enter the elements of two arrays and determines if they are istrictly identical or not by using a function with the header;
+	This is a program that prompts the user to enter the elements of two arrays and determines if they are is strictly identical or not by using a function with the header;
 			bool isEqual(const int list1[], const int list2[], int size)
 */
 
@@ -23,17 +23,26 @@ int main(void)
 	// Reads in elements into list1.
 	int numberOfElementsInList1 = fillArray(list1);
 
+	// Terminates the program if the number of elements read into list1 is 0.
+	if (numberOfElementsInList1 == 0)
+		exit(EXIT_FAILURE);
+
 	// Reads elements into list2
 	int numberOfElementsInList2 = fillArray(list2);
 
-	// Displays that the arrays aren't equal andterminates the program 
+	// Terminates the program if the number of elements read into list2 is 0.
+	if (numberOfElementsInList1 == 0)
+		exit(EXIT_FAILURE);
+
+	// Displays that the arrays aren't equal and terminates the program 
 	// if the number of elements in each array specified by the user is not equal.
 	if (numberOfElementsInList1 != numberOfElementsInList2)
 	{
 		std::cout << "\nlist1 and list2 are not strictly equal.\n";
 		exit(EXIT_SUCCESS);
 	}
-	
+
+	// Displays the result.
 	strictlyEqual(list1, list2, numberOfElementsInList1) ? std::cout << "\nList1 and List2 are strictly equal.\n" : std::cout << "\nList1 and List2 are not strictly equal.\n";
 
 	return (0);
@@ -49,18 +58,18 @@ int fillArray(int array[])
 {
 	int numberOfElements;
 
-	std::cout << "\nEnter elements of " << listOfNumbers << " (NB: First number in input represents number of elements in the list): ";
+	std::cout << "\nEnter elements of array" << listOfNumbers << " (NB: First number in input represents number of elements in the list): ";
 	std::cin >> numberOfElements;
-
-	for (int i = 0; i < numberOfElements; ++i)
-		std::cin >> array[i];
 
 	if (std::cin.fail() || numberOfElements <= 0 || numberOfElements > 20)
 	{
 		std::cout << "\nError: Use integers only\nAlso, first input must be non zero and between 1 and 20, Try again.\n";
-		numberOfElements = 0;
+		return (0);
 	}
-	
+
+	for (int i = 0; i < numberOfElements; ++i)
+		std::cin >> array[i];
+
 	listOfNumbers++;
 
 	return numberOfElements;
