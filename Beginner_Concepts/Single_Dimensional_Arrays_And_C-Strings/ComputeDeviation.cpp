@@ -3,7 +3,7 @@
 #include <cmath>
 
 /**
-	This is a program that ptimpts the user to enter 10 numbers and then determines and displays their
+	This is a program that prompts the user to enter 10 numbers and then determines and displays their
 	mean and standard deviation of the numbers using functions with headers;
 			double mean(const double x[], int size)
 			double deviation(const double x[], int size)

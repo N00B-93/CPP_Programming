@@ -4,7 +4,7 @@
     This is a program that prompts the user to enter the size of an array and the elements of an array and then
     uses a function with the header;
                             bool isConsecutiveFour(const int values[], int size)
-    to check if the array has four consecutive numbers withh the same value.
+    to check if the array has four consecutive numbers with the same value.
 */
 
 bool isConsecutiveFour(const int values[], int size);  // Prototype of the isConsecutiveFour function.
@@ -40,7 +40,7 @@ int main(int argc, char const *argv[])
 /**
  * Checks if an array has an element with consecutive four values.
  * 
- * @param values The array whose elementts are to be checked for consecutive four values.
+ * @param values The array whose elements are to be checked for consecutive four values.
  * @param size The number of elements in the array.
  * @return true if an element has consecutive four values, else false.
 */

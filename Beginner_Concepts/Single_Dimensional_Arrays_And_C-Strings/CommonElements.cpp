@@ -8,7 +8,7 @@
 static int arrayNumber = 1;
 
 void displayArray(const int array[], const int size);  // Prototype of the displayArray function.
-bool contains(const int array[], const int value, const int size);  // Prototyppe of the contains function.
+bool contains(const int array[], const int value, const int size);  // Prototype of the contains function.
 int readElements(int array[], int size);  // Prototype of the readElements function.
 
 int main(int argc, char const *argv[])
@@ -20,7 +20,7 @@ int main(int argc, char const *argv[])
     int numberOfCommonElements;
     
     // Creates two arrays to hold user input and an array to hold the elements common to both arrays.
-    int array1[SIZE], array2[SIZE], commonElemnts[SIZE];
+    int array1[SIZE], array2[SIZE], commonElements[SIZE];
 
     // Reads in the elements of array1.
 
@@ -41,16 +41,16 @@ int main(int argc, char const *argv[])
     // Determines the elements common to both arrays.
     for (int i = 0; i < SIZE; ++i)
     {
-        if (contains(array2, array1[i], SIZE) && !contains(commonElemnts, array1[i], SIZE))
+        if (contains(array2, array1[i], SIZE) && !contains(commonElements, array1[i], SIZE))
         {
-            commonElemnts[numberOfCommonElements] = array1[i];
+            commonElements[numberOfCommonElements] = array1[i];
             ++numberOfCommonElements;
         }
     }
 
     // Displays the common elements.
     std::cout << "\nThe common elements are: ";
-    displayArray(commonElemnts, numberOfCommonElements);
+    displayArray(commonElements, numberOfCommonElements);
 
     return (0);
 }
