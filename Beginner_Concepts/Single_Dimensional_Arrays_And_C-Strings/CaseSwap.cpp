@@ -34,7 +34,7 @@ int main(int argc, char const *argv[])
     // Swaps the case of each character in the vector.
     caseSwap(arrayOfCharacters);
 
-    // Displayes the vector of characters with the case of each character swapped.
+    // Displays the vector of characters with the case of each character swapped.
     std::cout << "\nThe characters with their cases swapped is: ";
     displayVector(arrayOfCharacters);
 
