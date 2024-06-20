@@ -56,9 +56,9 @@ Country getCountryWithHighestPopulationDensity(std::vector<Country> countries)
 
     for (Country country: countries)
     {
-        double populationDensity = countryWithHighestDensity.getPopulation() / countryWithHighestDensity.getLandArea();
+        double currentDensity = country.getPopulation() / country.getLandArea();
 
-        if ((country.getPopulation() / country.getLandArea()) > populationDensity)
+        if ((countryWithHighestDensity.getPopulation() / countryWithHighestDensity.getLandArea()) < currentDensity)
             countryWithHighestDensity = Country(country);
     }
 
