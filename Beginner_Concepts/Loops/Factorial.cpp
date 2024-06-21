@@ -12,16 +12,16 @@ int main(void)
 	unsigned long long int number, tempVar;
 
 	// Prompts the user to enter a non-negative integer.
-	std::cout << "\nEnter a non-negative integer: ";
+	std::cout << "\nEnter a non-negative integer <= 20: ";
 	std::cin >> number;
 	
 	// Assigns the user input to a temporary variable.
 	tempVar = number;
 
 	// Displays an error message and terminates the program if the user's input is invalid.
-	if (std::cin.fail() or number < 0)
+	if (std::cin.fail() || number < 0 || number > 20)
 	{
-		std::cout << "\nError: Use non-negative integers only, Try again.\n";
+		std::cout << "\nError: Use non-negative integers <= 20 only, Try again.\n";
 		return (1);
 	}
 
