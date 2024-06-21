@@ -18,14 +18,15 @@ int main(void)
     int multiple = number;
 
     // Displays an error message if the user enter's an invalid input.
-    while (not std::cin)
+    while (std::cin.fail() || number <= 0)
     {
         std::cin.clear();
         fflush(stdin);
-        std::cout << "\nError: Use a number > 0, Try again.";
+        std::cout << "\nError: Use a positive number > 0, Try again.";
 
         std::cout << "\nEnter an integer > 0: ";
         std::cin >> number;
+        multiple = number;
     }
 
     // Displays the first five multiples of the user input.
