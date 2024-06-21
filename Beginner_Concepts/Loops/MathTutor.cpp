@@ -1,7 +1,7 @@
 #include <iostream>
 #include <cstdlib>
 #include <ctime>
-#include <cstring>
+#include <string>
 
 /**
 	This is a program that displays a menu of mathematical operations(addition, subtraction, multiplication and division), the user is then to prompted 
@@ -37,7 +37,7 @@ int main(void)
 			  << "\n\nEnter a choice: ";
 		std::cin >> choice;
 
-		if (not std::cin or (choice < 1 or choice > 5))
+		if (std::cin.fail() || (choice < 1 || choice > 5))
 		{
 			std::cin.clear();
 			std::cout << "\nError: Enter a choice from 1 - 5, Try again.\n";
@@ -52,7 +52,7 @@ int main(void)
 		switch (choice)
 		{
 			case 1:
-				// Display an arithmetric expression.
+				// Display an arithmetic expression.
 				std::cout << "\nWhat is " << number1 << " + " << number2 << "? ";
 				std::cin >> answer;
 
@@ -63,7 +63,7 @@ int main(void)
 					std::cout << "\nWrong, the correct answer is " << number1 + number2 << "\n";
 				break;
 			case 2:
-				// Displays an arithmetric expression.
+				// Displays an arithmetic expression.
 				std::cout << "\nWhat is " << number1 << " - " << number2 << "? ";
 				std::cin >> answer;
 
@@ -74,7 +74,7 @@ int main(void)
 					std::cout << "\nWrong, the correct answer is " << number1 - number2 << "\n";
 				break;
 			case 3:
-				// Displays an arithmetric expression.
+				// Displays an arithmetic expression.
 				std::cout << "\nWhat is " << number1 << " x " << number2 << "? ";
 				std::cin >> answer;
 
@@ -85,7 +85,7 @@ int main(void)
 					std::cout << "\nWrong, the correct answer is " << number1 * number2 << "\n";
 				break;
 			case 4:
-				// Displays an arithmetric expression.
+				// Displays an arithmetic expression.
 				std::cout << "\nWhat is " << number1 << " / " << number2 << "? ";
 				std::cin >> answer;
 
