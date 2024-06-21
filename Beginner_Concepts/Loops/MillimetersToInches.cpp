@@ -11,7 +11,7 @@ int main(void)
     // Declares a constant value for conversion of millimeters to inches.
     const float MILLIMETERS_TO_INCHES = 0.039;
 
-    // Displays the conversion tablle.
+    // Displays the conversion table.
     std::cout << "\nMillimeters\t\tInches\n";
     for (int i = 2; i <= 98; i += 2)
     {

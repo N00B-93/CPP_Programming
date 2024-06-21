@@ -1,5 +1,5 @@
 #include <iostream>
-#include <cstring>
+#include <string>
 
 /**
 	This is a program that prompts the user to enter the number of items and each item’s name 
@@ -18,11 +18,12 @@ int main(void)
 	std::cin >> numberOfItems;
 
 	// Displays an error message and terminates the program if the user enters a number of items <= 0.
-	if (not std::cin or numberOfItems <= 0)
+	if (std::cin.fail() || numberOfItems <= 0)
 	{
 		std::cerr << "\nError: Number of items must be greater than 0, Try again.\n";
 		return (1);
 	}
+
 	// Variable to hold the name and price of the cheapest item.
 	float priceOfLowestItem(0.0f);
 	std::string nameOfLowestItem("");
@@ -34,7 +35,7 @@ int main(void)
 		std::cin >> itemPrice;
 		
 		// Displays an error message if the user enters an invalid price.
-		if (not std::cin or itemPrice <= 0)
+		if (std::cin.fail() || itemPrice <= 0)
 		{
 			std::cin.clear();
 			getline(std::cin, clearInputStream);  // Assigns the invalid user input to a string so as to clear stdin.
@@ -53,6 +54,7 @@ int main(void)
 		// Assigns the price of the first item to the priceOfLowestItem variable.
 		if (i == 0)
 			priceOfLowestItem = itemPrice;
+			
 		// Checks if the price of the lowest item is greater than the price of the current item.
 		if (priceOfLowestItem > itemPrice)
 		{

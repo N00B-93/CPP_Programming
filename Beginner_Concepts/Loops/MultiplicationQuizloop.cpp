@@ -9,7 +9,7 @@
 
 int main(void)
 {
-    // Seeds the raandom number generator with the Linux epoch
+    // Seeds the random number generator with the Linux epoch
     srand(time(NULL));
 
     // Declares variables to hold three numbers, the start time, end time of the test and the number of questions answered correctly.
@@ -23,7 +23,7 @@ int main(void)
     // Generates 10 multiplication problems.
     for (int i = 0; i < 10; i++)
     {
-        // Generates three randon numbers between 1 and 5.
+        // Generates three random numbers between 1 and 5.
         number1 = 1 + rand() % (5);
         number2 = 1 + rand() % (5);
         number3 = 1 + rand() % (5);
@@ -33,7 +33,7 @@ int main(void)
         std::cin >> answer;
         
         // Displays an error message and clears stdin if user enters an invalid input.
-        if (not std::cin)
+        if (std::cin.fail())
         {
             std::cout << "\nError: Invalid input, Try again.\n";
             std::cin.clear();

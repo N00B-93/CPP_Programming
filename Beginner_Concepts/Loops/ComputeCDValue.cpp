@@ -9,7 +9,7 @@
 
 int main(void)
 {
-    // Variables to hold the amount deposited, the percentage yield and the nuumber of months.
+    // Variables to hold the amount deposited, the percentage yield and the number of months.
     float amountDeposited, percentageYield, numberOfMonths;
 
     // Prompts the user to enter the amount to be deposited into the account.
@@ -17,7 +17,7 @@ int main(void)
     std::cin >> amountDeposited;
 
     // Displays an error message and terminates the program if the user enters an invalid amount.
-    if (std::cin.fail() or amountDeposited <= 0)
+    if (std::cin.fail() || amountDeposited <= 0)
     {
         std::cout << "\nError: Enter an amount > $ 0.0, Try again.\n";
         return (1);
@@ -28,7 +28,7 @@ int main(void)
     std::cin >> percentageYield;
 
     // Displays an error message and terminates the program if the user enters an invalid percentage interest.
-        if (std::cin.fail() or percentageYield <= 0)
+        if (std::cin.fail() || percentageYield <= 0)
     {
         std::cout << "\nError: Enter a percentage yield > 0.0%, Try again.\n";
         return (2);
@@ -39,7 +39,7 @@ int main(void)
     std::cin >> numberOfMonths;
 
     // Displays an error message and terminates the program if the user enters an invalid number of months.
-    if (std::cin.fail() or numberOfMonths <= 0)
+    if (std::cin.fail() || numberOfMonths <= 0)
     {
         std::cout << "\nError: Use number of months > 0, Try again.\n";
         return (3);

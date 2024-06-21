@@ -11,7 +11,7 @@ int main(void)
     // Declares a constant value for conversion of meters to feet.
     const float METERS_TO_FEET =  3.280;
 
-    // Displays the conversion tablle.
+    // Displays the conversion table.
     std::cout << "\nMeters\t\tFeet\n";
     for (int i = 1; i <= 15; i ++)
     {
