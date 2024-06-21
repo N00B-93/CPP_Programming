@@ -1,5 +1,5 @@
 #include <iostream>
-#include <cstring>
+#include <string>
 #include <cctype>
 
 /**
@@ -18,7 +18,7 @@ int main(void)
     getline(std::cin, str);
 
     // Displays an error message and terminates the program if the user enters an empty string.
-    if (str == "")
+    if (str.empty())
     {
         std::cout << "\nError: Use non-empty strings only, Try again.";
         return (1);

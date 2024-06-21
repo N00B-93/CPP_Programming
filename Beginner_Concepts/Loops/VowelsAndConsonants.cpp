@@ -1,5 +1,5 @@
 #include <iostream>
-#include <cstring>
+#include <string>
 
 /**
     This is a program that prompts the user to enter a string and displays the number of 

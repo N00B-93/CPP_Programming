@@ -1,5 +1,5 @@
 #include <iostream>
-#include <cstring>
+#include <string>
 #include <cctype>
 
 /**
@@ -39,7 +39,7 @@ int main(void)
 	}
 
 	// Checks if the Student ID is valid.
-	if (studentIDLength and firstCharacterIsDigit and alphanumericCharacters)
+	if (studentIDLength && firstCharacterIsDigit && alphanumericCharacters)
 		std::cout << "\n" << studentID << " is a valid Student ID.\n";
 	else
 		std::cout << "\n" << studentID << " is not a valid Student ID.\n";
