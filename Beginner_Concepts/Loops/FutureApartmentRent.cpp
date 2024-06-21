@@ -7,13 +7,13 @@
 
 int main(void)
 {
-    // Initailize a constant variable to hold the percent increment of the rent.
+    // Initialize a constant variable to hold the percent increment of the rent.
     const float INCREMENT_PERCENT = 0.03F;
 
     // Variable holding the current rent and total rent.
     float currentRent = 1000.0f, totalRent = currentRent;
 
-    for (int i = 0; i < 4; i++)
+    for (int i = 0; i < 5; i++)
     {
         currentRent += currentRent * INCREMENT_PERCENT;
         totalRent += currentRent;
@@ -26,4 +26,6 @@ int main(void)
     std::cout << "\nRent after 5 years: $" << currentRent + (currentRent * INCREMENT_PERCENT);
 
     std::cout << "\n";
+
+    return (0);
 }
