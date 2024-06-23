@@ -26,16 +26,17 @@ void swap(int& number1, int& number2)
  * Shuffles the column of an array(matrix)
  *
  * @param matrix The array(matrix) whose column is to be shuffled.
- * @param rowNumber The index of a row.
+ * @param rows The number of rows in the matrix.
  */
-void shuffle(int matrix[][COLUMN], int rowNumber)
-{	
+void shuffle(int matrix[][COLUMN], int rows)
+{
 	for (int i = COLUMN - 1; i > 0; --i)
 	{
-		srand(time(NULL));
 		int currentIndex = rand() % (i + 1);
-		for (int row = 0; row < COLUMN; ++row)
-			swap(matrix[rowNumber][i], matrix[rowNumber][currentIndex]);
+		for (int row = 0; row < rows; ++row)
+		{
+			swap(matrix[row][i], matrix[row][currentIndex]);
+		}
 	}
 }
 
@@ -57,6 +58,8 @@ void displayMatrix(const int matrix[][COLUMN], const int size)
 
 int main(int argc, char* const argv[])
 {
+	srand(time(NULL));
+
 	// Constant representing the row of a matrix.
 	const int SIZE = 3;
 	
@@ -73,8 +76,8 @@ int main(int argc, char* const argv[])
 	displayMatrix(matrix, SIZE);
 	
 	// Shuffles the column of the array(matrix).
-	for (int row = 0; row < SIZE; ++row)
-		shuffle(matrix, row);
+	
+	shuffle(matrix, SIZE);
 	
 	// Displays the array(matrix) after shuffling.
 	std::cout << "\nMatrix after shuffling.\n";
