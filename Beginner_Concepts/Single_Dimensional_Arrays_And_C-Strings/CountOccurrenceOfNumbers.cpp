@@ -10,15 +10,15 @@ int main (int argc, char *argv[])
   // Initialize and declares variables used in the program.
   const int MAX_VALUE = 100, MAX_INPUT = 100;
   int count[MAX_VALUE + 1] = {0};
-  int totalNumberOfInput{}, number;
+  int totalNumberOfInput{0}, number;
 
   // Reads in up to 100 integers from 1 - 100.
-  std::cout << "\nEnter up to " << MAX_INPUT << " integers between 1 - " << MAX_VALUE << ": ";
+  std::cout << "\nEnter up to " << MAX_INPUT << " integers between 1 - " << MAX_VALUE << "(press '0' to end input): ";
   while (totalNumberOfInput < MAX_INPUT)
   {
     std::cin >> number;
 
-    if (number == 0)  // Vreaks out of the loop if the user enters 0.
+    if (number == 0)  // Breaks out of the loop if the user enters 0.
       break;
     else if (number < 0 || number > 100)  // Goes to the next iteration if the number is < 1 or > 100.
     {
