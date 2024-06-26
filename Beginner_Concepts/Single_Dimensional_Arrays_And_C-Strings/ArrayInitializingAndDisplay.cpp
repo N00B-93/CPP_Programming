@@ -8,12 +8,12 @@
 */
 
 void initializeArray(double array[], const int size);  // Prototype of the initializeArray function.
-void displayArray(const double array[], const int size, const int nunberOfElementsPerLine);  // Prototype of the displayArray function.
+void displayArray(const double array[], const int size, const int numberOfElementsPerLine);  // Prototype of the displayArray function.
 
 int main(void)
 {
 	// Constants representing array size and number of elements to be displayed per line.
-	const int SIZE = 50, NUMBEROFELEMENTSPERLINE = 5;
+	const int SIZE = 50, NUMBER_OF_ELEMENTS_PER_LINE = 5;
 	
 	// Array of 50 double values.
 	double array[SIZE];
@@ -22,8 +22,8 @@ int main(void)
 	initializeArray(array, SIZE);
 
 	// Displays elements of the array.
-	std::cout << "\nThe elements of the arrray are:\n";
-	displayArray(array, SIZE, NUMBEROFELEMENTSPERLINE);
+	std::cout << "\nThe elements of the array are:\n";
+	displayArray(array, SIZE, NUMBER_OF_ELEMENTS_PER_LINE);
 
 	return (0);
 }
@@ -32,7 +32,7 @@ int main(void)
  * Initializes the first half of an array with the square of the index variable and the second half with three times the index variable.
  *
  * @param array The array to be initialized.
- * @param size The number of elements in the arrray.
+ * @param size The number of elements in the array.
  */
 void initializeArray(double array[], const int size)
 {
