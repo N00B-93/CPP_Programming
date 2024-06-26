@@ -2,7 +2,7 @@
 
 /**
     This is a program that prompts the user to enter two arrays containing integers that are 
-    sorted and then merges the two arrays containing the sorted integers by using a functio with the header;
+    sorted and then merges the two arrays containing the sorted integers by using a function with the header;
                   void merge(const int list1[], int size1, const int list2[], int size2, int list3[]).
 */
 
@@ -11,7 +11,7 @@ static int numberOfArrays = 1;
 
 bool isSorted(const int array[], int size);  // Prototype of the isSorted function.
 void merge(const int list1[], int size1, const int list2[], int size2, int list3[]);  // Prototype of the merge function.
-int fillArray(int array[], int & numberOfElementsInArray, const int maxSize); // Prototype of the fillArray function.
+int fillArray(int array[], int numberOfElementsInArray, const int maxSize); // Prototype of the fillArray function.
 void displayArray(const int array[], const int size);  // Prototype of the displayArray function.
 
 int main (int argc, char *argv[])
@@ -30,11 +30,13 @@ int main (int argc, char *argv[])
 
   if (numberOfElementsInArray1 == 0)  // Exits the program if the number of elements in array1 is 0.
     exit(EXIT_FAILURE);
+
   numberOfElementsInArray2 = fillArray(array2, numberOfElementsInArray2, MAX_SIZE);
 
     if (numberOfElementsInArray1 == 0)  // Exits the program if the number of elements in array2 is 0.
       exit(EXIT_FAILURE);
 
+  // Determines the number of elements in the array to hold the merger of the other two arrays.
   numberOfElementsInArray3 = numberOfElementsInArray1 + numberOfElementsInArray2;
   
   // Displays an error message and terminates the program if the arrays are not already sorted.
@@ -48,6 +50,7 @@ int main (int argc, char *argv[])
   merge(array1, numberOfElementsInArray1, array2, numberOfElementsInArray2, array3);
 
   // Displays the merged arrays.
+  std::cout << "\nThe Merged array is: ";
   displayArray(array3, numberOfElementsInArray3);
 
     return 0;
@@ -77,7 +80,7 @@ bool isSorted(const int array[], int size)
   * @param numberOfElementsInArray The number of elements to be copied into the array.
   * @return The number of elements copied into the array, or returns 0 if the user's first input is <= 0.
   */
-int fillArray(int array[], int & numberOfElementsInArray, const int maxSize)
+int fillArray(int array[], int numberOfElementsInArray, const int maxSize)
 {
     std::cout << "\nEnter elements of array" << numberOfArrays << "(NB: The first integer represents the number of elements to be added to the array): ";
     std::cin >> numberOfElementsInArray;
@@ -97,6 +100,7 @@ int fillArray(int array[], int & numberOfElementsInArray, const int maxSize)
       return (0);
     }
 
+    ++numberOfArrays;
     return numberOfElementsInArray;
 }
 
