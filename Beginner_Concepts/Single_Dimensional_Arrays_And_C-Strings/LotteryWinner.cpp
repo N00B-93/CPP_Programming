@@ -12,7 +12,7 @@
  * Determines whether a lottery number exists in an array of lottery numbers using binary search algorithm.
  *
  * @param ticketsPlayed An integer array containing lottery tickets holding 5-digit lottery numbers.
- * @param winningTicket The lottery number to be searched for in an array of lottery nunbers.
+ * @param winningTicket The lottery number to be searched for in an array of lottery numbers.
  * @param size The number of tickets in the array of lottery tickets.
  */
 bool isLotteryWinner(const int ticketsPlayed[], const int winningTicket, const int size)

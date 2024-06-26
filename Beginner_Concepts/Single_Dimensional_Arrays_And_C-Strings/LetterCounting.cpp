@@ -16,7 +16,7 @@ int main(int argc, char const *argv[])
 
     char userInput;
 
-    // Promots the user to enter a string.
+    // Prompts the user to enter a string.
     std::cout << "\nEnter a string(press ENTER to end input): ";
 
     // Read characters until Enter is pressed.
