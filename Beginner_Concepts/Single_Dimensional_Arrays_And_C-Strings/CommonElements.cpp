@@ -17,7 +17,7 @@ int main(int argc, char const *argv[])
     const int SIZE = 10;
 
     // Variable to hold the number of elements common to the two arrays.
-    int numberOfCommonElements;
+    int numberOfCommonElements = 0;
     
     // Creates two arrays to hold user input and an array to hold the elements common to both arrays.
     int array1[SIZE], array2[SIZE], commonElements[SIZE];
