@@ -1,6 +1,7 @@
 #include <iostream>
 #include <string>
 #include <iomanip>
+#include <limits>
 
 /**
 	This is a program that prompts the user to enter the quantities of different types of Salsa sold 
@@ -68,7 +69,7 @@ void displaySalesReport(std::string salsa[], int numberOfJarsOfSalsaSold[], int 
 {
 	int totalSales = 0;
 
-	std::cout << "\n\t\tSalsa Sales Report\n";
+	std::cout << "\n\tSalsa Sales Report\n";
 	std::cout << std::setw(10) << "Salsa Type" << std::setw(10) << "\t\tQuantity Sold\n";
 
 	for (int i = 0; i < size; ++i)
