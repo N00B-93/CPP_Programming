@@ -7,7 +7,7 @@
                     int isPalindrome(const std::vector<char> arrayOfCharacters)
 */
 
-int isPalindrome(const std::vector<char> arrayOfCharacters);  // Prototype of the isPlaindrome function.
+int isPalindrome(const std::vector<char> arrayOfCharacters);  // Prototype of the isPalindrome function.
 void displayVector(std::vector<char> arrayOfCharacters);  // Prototype of the displayVector function.
 
 int main(int argc, char const *argv[])
@@ -31,7 +31,7 @@ int main(int argc, char const *argv[])
         exit(EXIT_FAILURE);
     }
     
-    // Vhecks and displays if the user input is a palindrome or not.
+    // Checks and displays if the user input is a palindrome or not.
     int checkPalindrome = isPalindrome(arrayOfCharacters);
     if (checkPalindrome == arrayOfCharacters.size())
     {
