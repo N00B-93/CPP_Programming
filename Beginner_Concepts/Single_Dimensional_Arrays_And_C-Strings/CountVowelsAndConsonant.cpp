@@ -21,9 +21,16 @@ int main(int argc, char const *argv[])
     char input;
 
     // Prompts the user to enter a string of alphabets.
-    std::cout << "\nEnter a string of alphabets(press 0 to end input): ";
-    while (std::cin.get(input) && input != '0')
+    std::cout << "\nEnter a string of alphabets(press ENTER to end input): ";
+    while (std::cin.get(input) && input != '\n')
         characters.push_back(input);
+
+    // Displays an error message and terminates the program if the user does't enter any character.
+    if (characters.empty())
+    {
+        std::cout << "\nError: No character entered, Try again.\n";
+        exit(EXIT_FAILURE);
+    }
 
     // Determines the number of consonant and vowel in the user's input.
     for (char character: characters)
