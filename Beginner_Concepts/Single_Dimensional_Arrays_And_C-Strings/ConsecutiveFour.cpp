@@ -27,11 +27,19 @@ int main(int argc, char const *argv[])
 
     // Prompts the user to enter the elements of the array.
     int array[size];
+
     std::cout << "\nEnter the " << size << " elements of the array: ";
     for (int i = 0; i < size; ++i)
         std::cin >> array[i];
 
-    // Checksif the array has an element with consecutive four values.
+    // Displays an error message and terminates the program if the user enters an invalid input.
+    if (std::cin.fail())
+    {
+        std::cout << "\nError: Use real integers only as elements of the array, Try again.\n";
+        exit(EXIT_FAILURE);
+    }
+
+    // Checks if the array has an element with consecutive four values.
     isConsecutiveFour(array, size) ? std::cout << "\nThe array has an element with consecutive four values.\n" : std::cout << "\nThe array doesn't have an element with consecutive four values.\n";
 
     return (0);
