@@ -2,7 +2,7 @@
 #include <iomanip>
 #include "Inventory.hpp"
 
-// No-arg constructor that initializes all datafield to 0.
+// No-arg constructor that initializes all data field to 0.
 Inventory::Inventory()
 {
 	this->itemNumber = 0;
