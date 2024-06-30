@@ -1,5 +1,6 @@
 #include <iostream>
 #include <fstream>
+#include <string>
 
 
 /**
@@ -79,7 +80,7 @@ int main(int argc, char* const argv[])
 	// Closes the file.
 	inputStream.close();
 	
-	// Displays the nunber of occurrence of the string to be searched for in the file.
+	// Displays the number of occurrence of the string to be searched for in the file.
 	std::cout << "\n'" << stringToSearch << "' occurs in '" << filePath << "' " << countOccurrence << " times.\n";
 
 	return (0);
