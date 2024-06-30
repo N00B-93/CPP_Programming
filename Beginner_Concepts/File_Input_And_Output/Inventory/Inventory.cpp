@@ -6,6 +6,8 @@
 
 void addItem(std::string& filePath)
 {
+	std::cin.ignore(std::numeric_limits<std::streamsize>::max(), '\n');
+
 	// Creates an Inventory struct.
 	Inventory item;
 
@@ -66,10 +68,16 @@ void addItem(std::string& filePath)
 	}
 
 	// Open the database an adds the new item to it.
-	std::fstream inputOutputStream(filePath.c_str(), std::ios::app | std::ios::in | std::ios::binary);
+	std::fstream inputOutputStream(filePath.c_str(), std::ios::in | std::ios::binary);
 	std::vector<Inventory> items;
 	inputOutputStream.read(reinterpret_cast<char*>(&items), sizeof(items));
+
+	inputOutputStream.close();
+	
+	inputOutputStream.open(filePath.c_str(), std::ios::out | std::ios::binary);
+
 	items.push_back(item);
+
 	inputOutputStream.write(reinterpret_cast<char*>(&item), sizeof(item));
 	
 	std::cout << "\n'" << item.itemName << "' added successfully!\n";
@@ -102,6 +110,7 @@ void searchItem(std::string& filePath)
 	std::vector<Inventory> items;
 
 	std::cout << "\n1. Search by item ID\n2. Search by item name\n";
+	std::cout << "\nSelect a choice: ";
 	std::cin >> choice;
 
 	if (std::cin.fail() || choice < 1 || choice > 2)
@@ -125,7 +134,7 @@ void searchItem(std::string& filePath)
 			return;
 		}
 
-		inputStream.read(reinterpret_cast<char*>(&items), sizeof(items));
+		inputStream.read(reinterpret_cast<char*>(&items), sizeof(Inventory));
 
 		for (Inventory item: items)
 		{
@@ -148,11 +157,11 @@ void searchItem(std::string& filePath)
 	{
 		std::string name;
 
-		//std::cin.ignore(std::numeric_limits<std::streamsize>::max, '\n');
+		std::cin.ignore(std::numeric_limits<std::streamsize>::max(), '\n');
 		std::cout << "\nEnter item name: ";
 		getline(std::cin, name);
 
-		inputStream.read(reinterpret_cast<char*>(&items), sizeof(items));
+		inputStream.read(reinterpret_cast<char*>(&items), sizeof(Inventory));
 
 		
 		for (Inventory item: items)
@@ -173,4 +182,30 @@ void searchItem(std::string& filePath)
 		}
 	}
 
+	inputStream.close();
+
 }
+
+void displayMenu()
+{
+	std::cout << "\n\t\tWelcome to N00B's Store.\n";
+	std::cout << "\n1. Add an Item\n2. Search for an Item\n3. Update item details\n4. Delete an item\n5. Display all items\n6. Exit\n";
+}
+
+void createDatabase(std::string& filePath)
+{
+	std::vector<Inventory> items;
+
+	std::fstream fileStream(filePath.c_str(), std::ios::in);
+
+	if (!fileStream.is_open())
+	{
+		fileStream.clear();
+		fileStream.open(filePath.c_str(), std::ios::out);
+		fileStream.write(reinterpret_cast<char*>(&items), sizeof(items));
+		std::cout << "\nItems database created!\n";
+	}
+
+	fileStream.close();
+}
+
