@@ -48,9 +48,11 @@ void deleteItem(std::string filePath);
 void displayAllItems(std::string filePath);
 
 /**
- * Creates the itema database.
+ * Creates the items database.
  *
  * @param filePath The path to the item database.
  */
 void createDatabase(std::string filePath);
+
+void displayItemDetails(Inventory& item);
 
