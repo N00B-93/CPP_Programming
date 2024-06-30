@@ -52,7 +52,8 @@ void displayAllItems(std::string filePath);
  *
  * @param filePath The path to the item database.
  */
-void createDatabase(std::string filePath);
+void createDatabase(std::string& filePath);
 
 void displayItemDetails(Inventory& item);
 
+void displayMenu();
