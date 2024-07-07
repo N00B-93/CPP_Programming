@@ -1,0 +1,6 @@
+                                Complete the following tasks:
+a. Design a class to hold a JobBid. Each JobBid contains a bid number and a quoted price. Each JobBid also contains overloaded extraction and insertion operators.
+
+b. Include an overloaded operator<()function. A JobBid is considered lower than another JobBid when the quoted price is lower.
+
+c. Write a main()function that declares an array of four JobBid objects. Find and display the lowest JobBid.
