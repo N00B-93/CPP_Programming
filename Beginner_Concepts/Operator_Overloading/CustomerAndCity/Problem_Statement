@@ -1,0 +1,4 @@
+Create two classes. The first holds customer data—specifically, a customer name, customer number and
+zip code. The second, a class for cities, holds the city name, state, and zip code. Additionally, each class 
+contains a constructor that takes parameters to set the field values. Create a friend function that 
+displays a customer number and the customer’s city, state, and zip code. Write a brief main()function to test the classes and friend function.
