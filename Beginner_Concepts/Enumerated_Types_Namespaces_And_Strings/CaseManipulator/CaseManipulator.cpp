@@ -1,27 +1,32 @@
 #include "CaseManipulator.hpp"
-#include <cctype>
 #include <cstring>
 
-void capitalize(std::string* str)
+void reverseCase(char* str)
 {
-	for (int i = 0; i< str.length(); ++i)
-		str[i] = toupper(str[i]);
-
-}
-
-void toLowercase(std::string* str)
-{
-	for (int i = 0; i < str.length(); ++i)
-		str[i] = tolower(str[i]);
-}
-
-void reverseString(std::string* str)
-{
-	for (int i = 0, j = str.length() - 1; i < str.length(); ++i, --j)
+    while (*str != '\0')
 	{
-		char tempCharacter = str[i];
-		str[i] = str[j];
-		str[j] = tempCharacter;
-	}
+        if (isupper(*str))
+            *str = tolower(*str);
+        else if (islower(*str))
+            *str = toupper(*str);
+        str++;
+    }
 }
 
+void toLowercase(char* str)
+{
+    while (*str != '\0')
+	{
+        *str = tolower(*str);
+        str++;
+    }
+}
+
+void toUppercase(char* str)
+{
+    while (*str != '\0')
+	{
+        *str = toupper(*str);
+        str++;
+    }
+}
