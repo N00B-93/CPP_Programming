@@ -22,7 +22,7 @@ std::ostream& operator<<(std::ostream& outputStream, const Job& job)
 /**
  * Overloaded stream extraction operator.
  * 
- * @param inputStream Th instream Object.
+ * @param inputStream The instream Object.
  * @param job The Job Object whose details is to be displayed.
  * @return A reference to an istream Object.
  */
