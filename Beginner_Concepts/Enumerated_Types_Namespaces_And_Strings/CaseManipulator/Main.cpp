@@ -3,22 +3,23 @@
 
 int main(int argc, char* const argv[])
 {
-	// Variable to hold the user's input.
-	std::string str;
+	// Array to hold user input and the maximum amount of characters it can hold.s
+    const int MAX_LENGTH = 100;
+    char input[MAX_LENGTH];
 
-	// Prompts the user to enter a string.
-	std::cout << "\nEnter a string: ";
-	getline(std::cin, str);
+    // Prompt user for input
+    std::cout << "\nEnter a string: ";
+    std::cin.getline(input, MAX_LENGTH);
 
-	// Displays an error message and terminates the program if the user enters an empty string.
-	if (str.empty())
-	{
-		std::cout << "\nError: Use non empty strings only, Try again.\n";
-		return (1);
-	}
+    // Test each function in sequence: reverse, lower, upper
+    reverseCase(input);
+    std::cout << "\nAfter reversing case: " << input << std::endl;
 
-	// Displays the string in uppercase.
-	char ptr[] = str.c_str();
-	capitalize(ptr);
-	std::cout << "\n" << str << "\n";
+    toLowercase(input);
+    std::cout << "\nAfter converting to lowercase: " << input << std::endl;
+
+    toUppercase(input);
+    std::cout << "\nAfter converting to uppercase: " << input << std::endl;
+
+    return (0);
 }
