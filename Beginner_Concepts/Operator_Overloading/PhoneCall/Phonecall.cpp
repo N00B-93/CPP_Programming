@@ -28,7 +28,7 @@ PhoneCall::PhoneCall(std::string& phoneNumber, double callDuration, double rateP
  */
 std::ostream& operator<<(std::ostream& outputStream, PhoneCall& phoneCall)
 {
-    std::cout << "\nNumber Called: " << phoneCall.getPhoneNumber()
+    outputStream << "\nNumber Called: " << phoneCall.getPhoneNumber()
               << std::fixed << std::setprecision(2) <<  "\nNumber of Minutes: " << phoneCall.getCallDuration()
               << std::fixed << std::setprecision(2) << "\nRate Per Minute: $" << phoneCall.getRatePerMinute() << "\n";
 
