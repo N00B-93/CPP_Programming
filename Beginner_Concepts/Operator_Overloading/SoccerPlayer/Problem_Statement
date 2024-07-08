@@ -1,0 +1,7 @@
+            Complete the following tasks:
+a. Design a SoccerPlayer class that includes three integer fields: a player’s jersey number,
+number of goals, and number of assists. Overload extraction and insertion operators for the class.
+
+b. Include an operator>()function for the class. One SoccerPlayer is considered greater than another if the sum of goals plus assists is greater.
+
+c. Create an array of 11 SoccerPlayers, then use the > operator to find the player who has the greatest total of goals plus assists.
