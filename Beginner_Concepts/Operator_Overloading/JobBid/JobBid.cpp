@@ -23,8 +23,8 @@ JobBid::JobBid(int bidNum, double qPrice): bidNumber(bidNum), quotedPrice(qPrice
  */
 std::ostream& operator<<(std::ostream& outputStream, const JobBid& jobBid)
 {
-    std::cout << "\nBid Number: " << jobBid.getBidNumber()
-              << "\nQuoted Price: $" << jobBid.getQuotedPrice() << "\n";
+    outputStream << "\nBid Number: " << jobBid.getBidNumber()
+                 << "\nQuoted Price: $" << jobBid.getQuotedPrice() << "\n";
     
     return outputStream;
 }
@@ -39,15 +39,15 @@ std::ostream& operator<<(std::ostream& outputStream, const JobBid& jobBid)
 std::istream& operator>>(std::istream& inputStream, JobBid& jobBid)
 {
     std::cout << "\nEnter 3-digit bid number: ";
-    std::cin >> jobBid.bidNumber;
+    inputStream >> jobBid.bidNumber;
 
-    if (std::cin.fail() || jobBid.bidNumber < 100 || jobBid.bidNumber > 999)
+    if (inputStream.fail() || jobBid.bidNumber < 100 || jobBid.bidNumber > 999)
         return inputStream;
     
     std::cout << "\nEnter the quoted price for the job: $";
-    std::cin >> jobBid.quotedPrice;
+    inputStream >> jobBid.quotedPrice;
 
-    if (std::cin.fail() || jobBid.quotedPrice < 0)
+    if (inputStream.fail() || jobBid.quotedPrice < 0)
         return inputStream;
 
     return inputStream;
