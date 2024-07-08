@@ -1,0 +1,10 @@
+                Complete the following tasks:
+a. Design a Meal class with two fields—one that holds the name of the entrée, the other that holds a calorie count integer. Include a constructor that sets a Meal’s fields with parameters, or uses default values when no parameters are provided.
+
+b. Include an overloaded insertion operator function that displays a Meal’s values.
+
+c. Include an overloaded extraction operator that prompts a user for an entrée name and calorie count for a meal.
+
+d. Include an overloaded operator+()function that allows you to add two or more Meal objects. Adding two Meal objects means adding their calorie values and creating a summary Meal object in which you store “Daily Total” in the entrée field. 
+e. Write a main()function that declares four Meal objects named breakfast, lunch, dinner, and total. Provide values for the breakfast, lunch, and dinner objects. Include the statement total = breakfast + lunch + dinner; in your program,
+then display values for the four Meal objects.
