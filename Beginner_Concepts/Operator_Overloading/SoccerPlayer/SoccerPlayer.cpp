@@ -24,9 +24,9 @@ SoccerPlayer::SoccerPlayer(int jerseyNo, int goalsScored, int assistGiven): jers
  */
 std::ostream& operator<<(std::ostream& outputStream, const SoccerPlayer& soccerPlayer)
 {
-    std::cout << "\nJersey Number: " << soccerPlayer.getJerseyNumber();
-    std::cout << "\nGoals Scored: " << soccerPlayer.getGoals();
-    std::cout << "\nAssists: " << soccerPlayer.getAssists() << "\n";
+    outputStream << "\nJersey Number: " << soccerPlayer.getJerseyNumber();
+    outputStream << "\nGoals Scored: " << soccerPlayer.getGoals();
+    outputStream << "\nAssists: " << soccerPlayer.getAssists() << "\n";
 
     return outputStream;
 }
@@ -41,21 +41,21 @@ std::ostream& operator<<(std::ostream& outputStream, const SoccerPlayer& soccerP
 std::istream& operator>>(std::istream& inputStream, SoccerPlayer& soccerPlayer)
 {
     std::cout << "\nEnter the player Jersey Number: ";
-    std::cin >> soccerPlayer.jerseyNumber;
+    inputStream >> soccerPlayer.jerseyNumber;
 
-    if (std::cin.fail() || soccerPlayer.jerseyNumber < 1 || soccerPlayer.jerseyNumber > 100)
+    if (inputStream.fail() || soccerPlayer.jerseyNumber < 1 || soccerPlayer.jerseyNumber > 100)
         return inputStream;
     
     std::cout << "\nEnter the number of goals scored by the player: ";
-    std::cin >> soccerPlayer.goals;
+    inputStream >> soccerPlayer.goals;
 
-    if (std::cin.fail() || soccerPlayer.goals < 0)
+    if (inputStream.fail() || soccerPlayer.goals < 0)
         return inputStream;
 
     std::cout << "\nEnter the players number of assists: ";
-    std::cin >> soccerPlayer.assists;
+    inputStream >> soccerPlayer.assists;
     
-    if (std::cin.fail() || soccerPlayer.assists < 1)
+    if (inputStream.fail() || soccerPlayer.assists < 1)
         return inputStream;
 
     return inputStream;
