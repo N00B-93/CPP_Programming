@@ -1,0 +1,9 @@
+                Complete the following tasks:
+a. Design a ScoreKeeper class that tracks the scores a student receives in a course. Include fields for the name of the course, an integer that holds the number of different scores a  student is assigned during the course, and an integer pointer that points to a list of the student’s scores on tests and assignments in a class. Include a constructor that accepts the course name and number of scored items and then prompts the user for the individual scores. Each score must be a value from 0 to 100; if the score is too high or too low, reprompt the user for a valid score.
+
+b. Overload an insertion operator that displays an object’s values.
+
+c. Overload an = operator that assigns one ScoreKeeper to another.
+
+d. Write a main()function that demonstrates the class works correctly when two objects are created, one object is assigned to another, and subsequently, the object that was assigned goes out of scope.
+
