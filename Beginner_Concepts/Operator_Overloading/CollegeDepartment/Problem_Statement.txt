@@ -1,0 +1,15 @@
+                    Complete the following tasks:
+a. Design a CollegeDepartment class. Include fields for the department name (for example “Mathematics”), the department chair’s name (for example, “Lewis”), an integer that holds the number of classes offered by a department (for example, 10), and a string pointer that points to the individual courses offered by the department (for example, “MAT101”). Create two constructors. The default constructor assigns appropriate default values to the fields.
+The other constructor accepts parameters for the department name, department chair’s
+name, and number of courses and assigns them to their respective fields, and also prompts the user for the names of all the courses offered.
+
+b. Overload an insertion operator for the class.
+
+c. Overload > and < operators that compare CollegeDepartments based on number of courses offered.
+
+d. Overload an = operator to assign one CollegeDepartment to another.
+
+e. Write a main() function that declares an array of four CollegeDepartment objects. In a loop, prompt the user for a department name, chair name, and number of courses, then pass those arguments to the constructor to create a temporary CollegeDepartment. (The
+constructor then gets the individual course names from the user.) Assign each entered department to a spot in the array. After all the CollegeDepartment objects have been entered, display them in a loop.
+
+f. Modify the main()function to also display the CollegeDepartment objects with the most and fewest number of courses.
