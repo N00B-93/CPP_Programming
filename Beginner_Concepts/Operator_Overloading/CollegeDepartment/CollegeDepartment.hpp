@@ -10,6 +10,7 @@ class CollegeDepartment
     public:
         CollegeDepartment();
         CollegeDepartment(std::string&, std::string&, int);
+        ~CollegeDepartment();
         friend std::ostream& operator<<(std::ostream&, CollegeDepartment);
         friend bool operator<(CollegeDepartment&, CollegeDepartment&);
         friend bool operator>(CollegeDepartment&, CollegeDepartment&);
