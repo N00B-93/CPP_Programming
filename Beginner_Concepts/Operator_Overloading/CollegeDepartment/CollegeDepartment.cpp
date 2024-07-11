@@ -149,3 +149,11 @@ std::vector<CollegeDepartment> CollegeDepartment::getLowestCollegeDepartment(Col
 
     return lowestDepartments;
 }
+
+/**
+ * Destroys the allocated memory used to store the courses offered in a CollegeDepartment.
+ */
+CollegeDepartment::~CollegeDepartment()
+{
+    delete[] this->coursesOffered;
+}
