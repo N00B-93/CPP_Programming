@@ -4,7 +4,7 @@
 /**
     This is a program that prompts the user to enter a 4-digit
     then encrypts the number, displays the encrypted number 
-    and then decryptes the number to get it's original value.
+    and then decrypts the number to get it's original value.
 */
 
 int main(void)
@@ -17,7 +17,7 @@ int main(void)
     std::cin >> number;
 
     //Terminates the program if the user input is invalid.
-    if (std::cin.fail() or number.size() != 4)
+    if (std::cin.fail() || number.size() != 4)
     {
         std::cout << "\nError: Use a 4-digit number only, Try again.\n";
         exit(EXIT_FAILURE);

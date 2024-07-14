@@ -5,7 +5,7 @@
  * Encrypts a 4-digit number by replacing each digit with the result of adding 7 to the digit and getting the remainder after dividing the new value by 10. Then swaps the first digit with the third, and swap the second digit with the fourth.
  * 
  * @param number The number to be encrypted.
- * @return The encryped number.
+ * @return The encrypted number.
 */
 std::string encrypt4Digit(std::string number)
 {
