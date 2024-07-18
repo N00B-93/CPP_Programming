@@ -21,6 +21,6 @@ Rock::Rock(std::string rockName, int rockAge, double rockWeight): Pet(rockName, 
  */
 std::string Rock::getLifeSpan() const
 {
-	return "Thoudands of years.";
+	return "Thousands of years.";
 }
 
