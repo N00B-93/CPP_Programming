@@ -1,0 +1,6 @@
+Create an Investment class that contains fields to hold the initial value of an investment, the current value, the profit (calculated as the difference between current value and 
+initial value), and the percent profit (the profit divided by the initial value). Include a constructor that requires initial and current values and a display function. 
+Create a House class that includes fields for street address and square feet, a constructor that requires
+values for both fields, and a display function. Create a HouseThatIsAnInvestment class that inherits from Investment and House. It includes a constructor and a display
+function that calls the display functions of the parents. Write a main()function that declares a HouseThatIsAnInvestment and displays its values. 
+
