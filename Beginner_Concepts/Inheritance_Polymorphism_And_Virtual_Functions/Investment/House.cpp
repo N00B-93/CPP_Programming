@@ -43,3 +43,23 @@ double House::getSquareFeet() const
 	return this->squareFeet;
 }
 
+/**
+ * Sets the House address to the specified value.
+ *
+ * @param address The new House address.
+ */
+void House::setAddress(std::string address)
+{
+	this->address = address;
+}
+
+/**
+ * Sets the area of the House to the specified value.
+ *
+ * @param squareFeet The new area of the House.
+ */
+void House::setSquareFeet(double squareFeet)
+{
+	this->squareFeet = squareFeet;
+}
+
