@@ -6,11 +6,13 @@ class Investment
 	public:
 		Investment();
 		Investment(double, double);
-		void display() const;
+		void display();
 		double getInitialValue() const;
 		double getCurrentValue() const;
-		double getProfit() const;
-		double getPercentProfit() const;
+		double getProfit();
+		double getPercentProfit();
+		void setInitialValue(double);
+		void setCurrentValue(double);
 	
 	//.Atttibutes of an Investment.
 	private:
