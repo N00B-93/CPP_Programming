@@ -7,6 +7,6 @@ class HouseThatIsAnInvestment: public Investment, public House
 	public:
 		HouseThatIsAnInvestment();
 		HouseThatIsAnInvestment(double, double, std::string, double);
-		void display() const;
+		void display();
 };
 
