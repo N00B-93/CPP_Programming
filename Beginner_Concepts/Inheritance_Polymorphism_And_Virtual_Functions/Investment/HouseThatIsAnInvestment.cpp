@@ -18,7 +18,7 @@ HouseThatIsAnInvestment::HouseThatIsAnInvestment(double initialValue, double cur
 /**
  * Displays the Properties of an JouseThatIsAnInvestment.
  */
-void HouseThatIsAnInvestment::display() const
+void HouseThatIsAnInvestment::display()
 {
 	this->Investment::display();
 	this->House::display();
