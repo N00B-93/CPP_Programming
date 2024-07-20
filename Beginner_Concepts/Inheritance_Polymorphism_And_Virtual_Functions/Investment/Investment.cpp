@@ -23,24 +23,22 @@ Investment::Investment(double initialValue, double currentValue)
 {
 	this->initialValue = initialValue;
 	this->currentValue = currentValue;
-	this->profit = this->currentValue - this->initialValue;
-	this->profitPercent = (this->profit / this->initialValue) * 100;
 }
 
 /**
  * Displays details about an Investment.
  */
-void Investment::display() const
+void Investment::display()
 {
 	std::cout << "\nInitial Value: $" << this->getInitialValue();
 	std::cout << "\nCurrent Value: $" << this->getCurrentValue();
 
-	if (this->profit >= 0)
+	if (this->getProfit() >= 0)
 		std::cout << "\nProfit: $" << this->getProfit();
-	else if (this->profit < 0)
+	else if (this->getProfit() < 0)
 		std::cout << "\nLoss: $" << this->getProfit() * -1;
 	
-	if (this->profitPercent < 0)
+	if (this->getPercentProfit() < 0)
 		std::cout << std::fixed << std::setprecision(2) << "\nLoss Percent: " << this->getPercentProfit() * -1 << "%";
 	else
 		std::cout << std::fixed << std::setprecision(2) << "\nProfit Percent: " << this->getPercentProfit() << "%";
@@ -71,8 +69,9 @@ double Investment::getCurrentValue() const
  *
  * @return The profit of an Investment.
  */
-double Investment:: getProfit() const
+double Investment:: getProfit()
 {
+	this->profit = this->currentValue - this->initialValue;
 	return this->profit;
 }
 
@@ -81,8 +80,28 @@ double Investment:: getProfit() const
  *
  * @return The percentage profit or loss on an Investment.
  */
-double Investment::getPercentProfit() const
+double Investment::getPercentProfit()
 {
+	this->profitPercent = (this->profit / this->initialValue) * 100;
 	return this->profitPercent;
 }
 
+/**
+ * Sets the initial value of the Investment to the specified value.
+ *
+ * @param initialValue The new initial value of an Investment.
+ */
+void Investment::setInitialValue(double initialValue)
+{
+	this->initialValue = initialValue;
+}
+
+/**
+ * Sets the current value of an Investment to the specified value.
+ *
+ * @param currentValue The new current value of an Investment.
+ */
+void Investment::setCurrentValue(double currentValue)
+{
+	this->currentValue = currentValue;
+}
