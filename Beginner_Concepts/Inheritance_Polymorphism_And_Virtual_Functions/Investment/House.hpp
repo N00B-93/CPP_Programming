@@ -10,6 +10,8 @@ class House
 		void display() const;
 		std::string getAddress() const;
 		double getSquareFeet() const;
+		void setAddress(std::string);
+		void setSquareFeet(double);
 	
 	// Attributes of a House.
 	private:
