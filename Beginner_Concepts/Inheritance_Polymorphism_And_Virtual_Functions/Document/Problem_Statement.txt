@@ -1,0 +1,17 @@
+Define a class named Document that contains a member variable of type string named text that stores any textual content for the document. Create a function named getText that returns the text field, a way to set this value, and an overloaded assignment operator.
+
+Next, define a class for Email that is derived from Document and that includes member variables for the sender, recipient, and title of an e-mail message. 
+Implement appropriate accessor and mutator functions. The body of the e-mail message should be stored in the inherited variable text. Also overload the assignment operator for this class.
+
+Similarly, define a class for File that is derived from Document and that includes a member variable for the pathname. Implement appropriate accessor and mutator functions for the pathname and overload the assignment operator.
+
+Finally, create several sample objects of type Email and File in your main function. Test your objects by passing them to the following subroutine, which will return true if the object contains the specified keyword in the text property.
+
+bool ContainsKeyword(const Document& docObject, string keyword)
+{
+    if (docObject.getText().find(keyword) != string::npos)
+        return true;
+    return false;
+}
+
+ For example, you might test to see whether an e-mail message contains the text "c++" with the call ContainsKeyword(emailObj, "c++");.
