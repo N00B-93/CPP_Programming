@@ -1,0 +1,4 @@
+Create a Job class that holds a Job ID number and the cost of the Job. Include insertion and extraction operators. Create a JobExceptionclass that holds a Job and an error message.
+When the user enters Job data, if the Job fee is below $250, then create a JobException object and throw it. Write a main()function that declares an array of eight Job objects.
+If a JobException object is thrown during the data entry for any Job, require the user to enter data for a new Job, and replace the invalid Job.
+
