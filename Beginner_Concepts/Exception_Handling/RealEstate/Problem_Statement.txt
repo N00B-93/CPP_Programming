@@ -1,0 +1,4 @@
+Create a class named RealEstate that has data members to hold the price of a house, the number of bedrooms, and the number of baths. Member functions include overloaded insertion and extraction operators. 
+Write a main()function that instantiates a RealEstate object, allows the user to enter data, and displays the data members entered. 
+The main() function should display an appropriate thrown error message if non-numeric or negative
+values are entered for any of the data members. 
