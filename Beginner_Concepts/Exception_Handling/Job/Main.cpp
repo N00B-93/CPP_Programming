@@ -21,12 +21,12 @@ int main(int argc, char* const argv[])
 		{
 			std::cerr << jobException.what() << std::endl;
 			i--;
-        	}
+        }
 		catch (std::runtime_error& runtimeError)
 		{
-			std::cout << "\n" << runtimeError.what();
+			std::cerr << "\n" << runtimeError.what();
 		}
-    	}
+    }
 	
 	// Displays all the Job Objects in the array of Jobs.
 	std::cout << "\n\t\tJob information\n";
