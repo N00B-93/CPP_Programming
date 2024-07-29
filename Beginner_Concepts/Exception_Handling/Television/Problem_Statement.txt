@@ -1,0 +1,6 @@
+Complete the following tasks:
+a. Create a class named TelevisionException that inherits from runtime_error. The class constructor should accept a string argument that is passed to the parent as the what()message.
+
+b. Create a class named Television that has data members to hold the model number of a television, the screen size in inches, and the price. Member functions include overloaded insertion and extraction operators. If more than four digits are entered for the model number, if the screen size is smaller than 12 or greater than 70, or if the price is negative or over $5,000, then throw a TelevisionException object with an appropriate message.
+
+c. Create a new application that instantiates an array of five television objects and allows the user to enter data for them. If an exception is caught, make the user reenter the data for that Television.
