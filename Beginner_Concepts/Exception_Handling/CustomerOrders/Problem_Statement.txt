@@ -1,0 +1,19 @@
+Complete the following tasks:
+a. Create a NonNumericException class that inherits from runtime_error. The class contains a string that holds any non-numeric data entered and uses its parent’s what()
+function to display an appropriate error message.
+
+b. Create a class that holds customer orders. Include an order number, quantity ordered, price each, and total which will be calculated as quantity times price. Also include overloaded
+insertion and extraction operators. Overload the extraction operator so that the following
+occur:
+» If any numeric data is not entered as a number, throw a NonNumericException.
+» If the entered order number is numeric but more than four digits, throw an appropriate message.
+» If the entered order quantity is over 50, throw the quantity.
+» If the entered price each is more than $39.95, throw the price.
+» If the total (quantity times price) is more than $1000.00, throw the Order object.
+
+c. Write a program that creates an array of five orders. Accept data for each one from the user. Catch and handle the errors as follows:
+» If the order number was numeric but more than four digits, display a message and force the user to renter the number.
+» If the order total was more than the $1000 limit, accept the Order but display a message asking the order taker to check the customer’s credit limit.
+» If any other exception occurs, display an appropriate message and set all the order values to zeroes.
+» If no exceptions occur, accept the Order.
+» After five Orders are accepted, display them.
