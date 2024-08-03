@@ -1,0 +1,19 @@
+Complete the following tasks:
+a. Create an OutOfRangeException that descends from the built-in out_of_range exception class. Include fields that hold the low and high limits of the range and the value
+that was out of range. Include get functions for each of the values.
+
+b. Create a Meal class. Data fields include a string entrée name and a double price. Include a data entry function that prompts for and accepts values for both data fields, and
+that throws an OutOfRangeException if the price is less than $5.00 or more than $29.99. Include a public function that returns the Meal price so that you can use it in a calculation in the Party class that you will create in part d of this problem. Also include an overloaded
+insertion operator to display a Meal’s data values.
+
+c. Create an EntertainmentAct class. Data fields include a string phone number for the contact person for the act and a double fee for the entertainment act. Include a data entry
+function that prompts for and accepts values for both data fields, and that creates and throws an OutOfRangeException if the price is less than $50.00 or more than $3,000. Include a public function that returns the EntertainmentAct price so that you can use it in a calculation in the Party class that you will create in part d of this problem. Also include an overloaded insertion operator to display an EntertainmentAct object’s data values.
+
+d. Create a Party class for a party-planning organization. A Party contains a Meal, an EntertainmentAct, an integer number of guests invited to the party, and a total cost for
+the party. The Party data entry function prompts the user for Meal, EntertainmentAct, and guest number values. The function throws an OutOfRangeException if the number
+of guests is less than 2 or more than 1000. The function also calculates the Party cost, based on the Meal’s price times the number of guests, plus the price of the
+EntertainmentAct.
+
+e. Write a main()function that instantiates at least five Party objects and accepts data for each. When you run the program, provide data that tests that each type of exception is
+being recognized. The main()function should catch the exceptions and display an appropriate error message about each including what the acceptable range was and what the
+entered value was. If an exception is caught, the data for the entire Party object should be entered again.
