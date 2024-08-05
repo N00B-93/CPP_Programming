@@ -12,6 +12,7 @@ int main(int argc, char* const argv[])
 		std::cin >> realEstate;
 		
 		// Displays the RealEstate Object.
+		std::cout << "\n\t\tProperty details.";
 		std::cout << realEstate;
 	}
 	catch (std::runtime_error error)
